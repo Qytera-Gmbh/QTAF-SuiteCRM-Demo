@@ -1,11 +1,16 @@
 package de.qytera.suite_crm;
 
+import com.google.inject.Provides;
+import com.google.inject.Singleton;
 import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import de.qytera.suite_crm.page_objects.*;
+import foo.PageObject;
 
 import javax.inject.Inject;
 
+@PageObject
 public class SuiteCRMTestContext extends QtafTestNGContext {
+
     @Inject
     protected Navigator navigator;
 
@@ -19,6 +24,12 @@ public class SuiteCRMTestContext extends QtafTestNGContext {
     protected TopBarContactsMenu topBarContactsMenu;
 
     @Inject
+    protected TopBarCallsMenu topBarCallsMenu;
+
+    @Inject
+    protected CalendarPage calendarPage;
+
+    @Inject
     protected CreateContactPage createContactPage;
 
     @Inject
@@ -29,4 +40,13 @@ public class SuiteCRMTestContext extends QtafTestNGContext {
 
     @Inject
     protected CreateMeetingForm createMeetingForm;
+
+    @Inject
+    protected CallsPage callsPage;
+
+    @Inject
+    protected CreateCallPage createCallPage;
+
+    @Inject
+    protected CreateCallForm createCallForm;
 }

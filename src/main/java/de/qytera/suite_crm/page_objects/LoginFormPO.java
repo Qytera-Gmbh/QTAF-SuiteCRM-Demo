@@ -4,6 +4,12 @@ import de.qytera.qtaf.core.guice.annotations.Step;
 import de.qytera.suite_crm.SuiteCRMTestContext;
 import org.openqa.selenium.By;
 
+
+
+import javax.inject.Singleton;
+
+
+@Singleton
 public class LoginFormPO extends SuiteCRMTestContext {
     protected String usernameFieldId = "user_name";
     protected String passwordFieldId = "input#username_password";

@@ -5,6 +5,12 @@ import de.qytera.suite_crm.SuiteCRMTestContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+
+
+import javax.inject.Singleton;
+
+
+@Singleton
 public class CreateMeetingForm extends SuiteCRMTestContext {
     String subjectInputSelector = "#name";
     String locationInputSelector = "#location";

@@ -11,16 +11,9 @@ import javax.inject.Singleton;
 
 
 @Singleton
-public class CreateContactPage extends SuiteCRMTestContext {
-    String moduleButtonSelector = "#moduleTab_Contacts";
-    String saveButtonSelector = "#SAVE";
+public class CreateCallPage extends SuiteCRMTestContext {
+    String saveButtonSelector = "#SAVE_HEADER";
     String cancelButtonSelector = "#CANCEL";
-
-    @Step(name = "Click contact module button", description = "Click contact module button")
-    public void clickContactModuleButton() {
-        WebElement menu = driver.findElement(By.cssSelector(moduleButtonSelector));
-        menu.click();
-    }
 
     @Step(name = "Click save button", description = "Click save button")
     public void clickSaveButton() {
@@ -33,4 +26,5 @@ public class CreateContactPage extends SuiteCRMTestContext {
         WebElement menu = driver.findElement(By.cssSelector(cancelButtonSelector));
         menu.click();
     }
+
 }

@@ -4,6 +4,12 @@ import de.qytera.qtaf.core.guice.annotations.Step;
 import de.qytera.suite_crm.SuiteCRMTestContext;
 import org.openqa.selenium.WebElement;
 
+
+
+import javax.inject.Singleton;
+
+
+@Singleton
 public class TopBarContactsMenu extends SuiteCRMTestContext {
 
     public void clickNthItem(int n) {

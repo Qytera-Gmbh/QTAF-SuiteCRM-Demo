@@ -5,8 +5,13 @@ import de.qytera.suite_crm.SuiteCRMTestContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+
 import java.util.Random;
 
+import javax.inject.Singleton;
+
+
+@Singleton
 public class CreateContactForm extends SuiteCRMTestContext {
     Random random = new Random();
 

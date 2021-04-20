@@ -6,8 +6,8 @@
     "package":"de.qytera.suite_crm.tests"
   },
   "driver":{
-    "name":"chrome",
-    "remoteUrl":null,
+    "name": "chrome",
+    "remoteUrl": "http://localhost:4444/wd/hub",
     "quitAfterTesting": true
   },
   "logging":{
