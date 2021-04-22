@@ -1,0 +1,1 @@
+kubectl port-forward deployment/mariadb 3306:3306

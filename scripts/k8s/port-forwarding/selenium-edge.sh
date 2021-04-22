@@ -1,0 +1,1 @@
+kubectl port-forward deployment/selenium-edge 4447:4444

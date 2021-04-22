@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: selenium-opera
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: selenium-opera
+  template:
+    metadata:
+      labels:
+        app: selenium-opera
+    spec:
+      containers:
+        - name: selenium-opera
+          image: selenium/standalone-opera
+          ports:
+            - containerPort: 4444

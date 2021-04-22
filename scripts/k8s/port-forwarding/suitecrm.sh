@@ -1,0 +1,1 @@
+kubectl port-forward deployment/suitecrm 8080:8080

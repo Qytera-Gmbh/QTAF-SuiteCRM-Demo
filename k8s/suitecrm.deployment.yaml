@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: suitecrm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: suitecrm
+  template:
+    metadata:
+      labels:
+        app: suitecrm
+    spec:
+      containers:
+        - name: suitecrm
+          image: docker.io/bitnami/suitecrm:7-debian-10
+          ports:
+            - containerPort: 8080
+            - containerPort: 443
+          env:
+            - name: SUITECRM_DATABASE_HOST
+              value: mariadb
+            - name: SUITECRM_DATABASE_PORT_NUMBER
+              value: "3306"
+            - name: SUITECRM_DATABASE_USER
+              value: bn_suitecrm
+            - name: SUITECRM_DATABASE_NAME
+              value: bitnami_suitecrm
+            - name: ALLOW_EMPTY_PASSWORD
+              value: "yes"

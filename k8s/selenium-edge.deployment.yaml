@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: selenium-edge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: selenium-edge
+  template:
+    metadata:
+      labels:
+        app: selenium-edge
+    spec:
+      containers:
+        - name: selenium-edge
+          image: selenium/standalone-edge
+          ports:
+            - containerPort: 4444

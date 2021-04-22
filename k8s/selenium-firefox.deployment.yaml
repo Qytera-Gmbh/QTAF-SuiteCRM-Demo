@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: selenium-firefox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: selenium-firefox
+  template:
+    metadata:
+      labels:
+        app: selenium-firefox
+    spec:
+      containers:
+        - name: selenium-firefox
+          image: selenium/standalone-firefox
+          ports:
+            - containerPort: 4444
