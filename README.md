@@ -12,7 +12,7 @@ Auf Ihrem PC muss installiert sein:
 
 ## Projekt aufsetzen
 
-Klonen Sie sich dieses Git-Repository mittels `git clone https://bitbucket.org/qytera/suitecrm-demo-projekt` auf Ihren PC und führen Sie anschließend in dem Verzeichnis, in as Sie dieses Projekt geklont haben den Befehl `docker-compose up -d` aus. Es kann einige Minuten dauern, bis das Projekt eingerichtet worden ist. Anschließend können Sie in Ihrem Browser die Adresse `http://localhost:80` öffnen. Der Standardusername lautet `user` und das Standardpasswort `bitnami`.
+Klonen Sie sich dieses Git-Repository mittels `git clone https://bitbucket.org/qytera/qtaf-suitecrm-tests` auf Ihren PC und führen Sie anschließend in dem Verzeichnis, in as Sie dieses Projekt geklont haben den Befehl `docker-compose up -d` aus. Es kann einige Minuten dauern, bis das Projekt eingerichtet worden ist. Anschließend können Sie in Ihrem Browser die Adresse `http://localhost:8080` öffnen. Der Standardusername lautet `user` und das Standardpasswort `bitnami`.
 
 ## Selenium Docker-Container mittels docker-compose starten
 
