@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: selenium-chrome
+  name: selenium-edge
 spec:
   type: LoadBalancer
   selector:
-    app: selenium-chrome
+    app: selenium-edge
   ports:
     - protocol: TCP
       port: 4447

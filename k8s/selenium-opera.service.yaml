@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: selenium-chrome
+  name: selenium-opera
 spec:
   type: LoadBalancer
   selector:
-    app: selenium-chrome
+    app: selenium-opera
   ports:
     - protocol: TCP
       port: 4446
