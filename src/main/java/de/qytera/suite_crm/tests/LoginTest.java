@@ -4,7 +4,6 @@ import com.github.javafaker.Faker;
 import de.qytera.qtaf.core.config.annotations.TestFeature;
 import de.qytera.suite_crm.SuiteCRMTestContext;
 import org.openqa.selenium.Dimension;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import javax.inject.Singleton;
@@ -17,7 +16,7 @@ import javax.inject.Singleton;
 public class LoginTest extends SuiteCRMTestContext {
     Faker faker = new Faker();
 
-    @Test
+    @Test(testName = "QTAF-496", description = "Login Test")
     public void testLogin() throws InterruptedException {
         driver.manage().window().setSize(new Dimension(1051, 660));
 
@@ -79,7 +78,5 @@ public class LoginTest extends SuiteCRMTestContext {
         //Navigate to calls page
         topNavbar.openMobileMenu();
         topNavbar.clickHomeMenuFromNotHomePage();
-
-        Assert.assertTrue(2 * 2 == 4);
     }
 }

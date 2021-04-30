@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: selenium-edge
-          image: selenium/standalone-edge
+          image: selenium/standalone-edge:91.0
           ports:
             - containerPort: 4444
