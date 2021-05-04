@@ -12,6 +12,7 @@ import javax.inject.Singleton;
 @Singleton
 public class TopBarContactsMenu extends SuiteCRMTestContext {
 
+    @Step(name = "Click n-th item", description = "Click n-th item of the menu")
     public void clickNthItem(int n) {
         WebElement we = topNavbar.getModuleLinks().get(n -1);
         we.click();
