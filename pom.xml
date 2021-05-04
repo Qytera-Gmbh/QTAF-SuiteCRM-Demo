@@ -49,6 +49,7 @@
                             <mainClass>de.qytera.suite_crm.TestRunner</mainClass>
                         </manifest>
                     </archive>
+                    <finalName>app</finalName>
                 </configuration>
             </plugin>
             <plugin>
