@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY ./pom.xml ./
 
-RUN mvn clean install
+RUN mvn clean install -DskipTests=true
 
 COPY ./ ./
 
