@@ -30,33 +30,28 @@ services:
 
   # Selenium chrome
   selenium-chrome:
-    image: selenium/standalone-chrome
+    image: selenium/standalone-chrome-debug
     ports:
       - '4444:4444'
-      - '7900:7900'
+      - "5901:5900"
+      - '7901:7900'
     restart: always
 
   # Selenium firefox
   selenium-firefox:
-    image: selenium/standalone-firefox
+    image: selenium/standalone-firefox-debug
     ports:
       - '4445:4444'
-      - '7901:7900'
+      - "5902:5900"
+      - '7902:7900'
     restart: always
 
   # Selenium opera
   selenium-opera:
-    image: selenium/standalone-opera
+    image: selenium/standalone-opera-debug
     ports:
       - '4446:4444'
-      - '7902:7900'
-    restart: always
-
-  # Selenium edge
-  selenium-edge:
-    image: selenium/standalone-edge:91.0
-    ports:
-      - '4447:4444'
+      - "5903:5900"
       - '7903:7900'
     restart: always
 

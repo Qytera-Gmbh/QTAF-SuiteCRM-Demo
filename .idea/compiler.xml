@@ -9,5 +9,8 @@
         <module name="SuiteCRMTestProject" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SuiteCRMTestProject" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

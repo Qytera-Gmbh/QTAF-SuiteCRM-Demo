@@ -9,6 +9,7 @@
 # Qtaf
 logs/
 test-output/
+videos/
 
 # User-specific stuff
 .idea/**/workspace.xml
