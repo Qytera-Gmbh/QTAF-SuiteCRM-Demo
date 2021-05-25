@@ -14,7 +14,6 @@ import javax.inject.Singleton;
 )
 @Singleton
 public class LoginTest extends SuiteCRMTestContext {
-    Faker faker = new Faker();
 
     @Test(testName = "QTAF-496", description = "Login Test", groups = {"login"})
     public void testLogin(){

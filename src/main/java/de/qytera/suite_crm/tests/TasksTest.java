@@ -16,7 +16,7 @@ public class TasksTest extends SuiteCRMTestContext {
     Faker faker = new Faker();
 
     @Test(testName = "Tasks Test", description = "Tasks Test", dependsOnGroups = {"login"})
-    public void testTasks() throws InterruptedException {
+    public void testTasks() {
 
         //Navigate to Tasks Create Page
         topNavbar.openMobileMenu();

@@ -15,7 +15,7 @@ import javax.inject.Singleton;
 public class ContactsTest extends SuiteCRMTestContext {
     Faker faker = new Faker();
 
-    @Test(testName = "Contacts Test", description = "Contacts Test", dependsOnGroups = {"login"})
+    @Test(testName = "QTAF-568", description = "Contacts Test", dependsOnGroups = {"login"})
     public void testContacts() throws InterruptedException {
 
         // Navigate to Contacts Create page
