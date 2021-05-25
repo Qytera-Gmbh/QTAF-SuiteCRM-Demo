@@ -67,6 +67,24 @@ public class TopNavbar extends SuiteCRMTestContext {
         we.click();
     }
 
+    @Step(name = "Click campaigns menu item", description = "Click campaigns menu item")
+    public void clickMobileCampaignsMenu() {
+        WebElement we = this.getMenuItems().get(10);
+        we.click();
+    }
+
+    @Step(name = "Click tasks menu item", description = "Click tasks menu item")
+    public void clickMobileTasksMenu() {
+        WebElement we = this.getMenuItems().get(13);
+        we.click();
+    }
+
+    @Step(name = "Click targets menu item", description = "Click targets menu item")
+    public void clickMobileTargetsMenu() {
+        WebElement we = this.getMenuItems().get(18);
+        we.click();
+    }
+
     @Step(name = "Click module button", description = "Click module button")
     public void clickModuleButton() {
         WebDriverWait wait = new WebDriverWait(driver,5);

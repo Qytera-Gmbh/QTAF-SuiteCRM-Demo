@@ -10,7 +10,7 @@ import javax.inject.Singleton;
 
 
 @Singleton
-public class TopBarContactsMenu extends SuiteCRMTestContext {
+public class TopBarMenu extends SuiteCRMTestContext {
 
     @Step(name = "Click n-th item", description = "Click n-th item of the menu")
     public void clickNthItem(int n) {
@@ -19,13 +19,13 @@ public class TopBarContactsMenu extends SuiteCRMTestContext {
     }
 
     @Step(name = "Click create contact menu item", description = "Click create contact menu item")
-    public void clickCreateContactLink() {
+    public void clickCreateLink() {
         WebElement we = topNavbar.getModuleLinks().get(0);
         we.click();
     }
 
     @Step(name = "Click view contacts menu item", description = "Click view contacts menu item")
-    public void clickViewContactsLink() {
+    public void clickViewLink() {
         WebElement we = topNavbar.getModuleLinks().get(2);
         we.click();
     }
