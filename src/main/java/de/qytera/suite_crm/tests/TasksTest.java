@@ -15,7 +15,7 @@ import javax.inject.Singleton;
 public class TasksTest extends SuiteCRMTestContext {
     Faker faker = new Faker();
 
-    @Test(testName = "Tasks Test", description = "Tasks Test", dependsOnGroups = {"login"})
+    @Test(testName = "QTAF-572", description = "Tasks Test", dependsOnGroups = {"login"})
     public void testTasks() {
 
         //Navigate to Tasks Create Page

@@ -12,7 +12,7 @@ import javax.inject.Singleton;
 )
 @Singleton
 public class MeetingsTest extends SuiteCRMTestContext {
-    @Test(testName = "Meetings Test", description = "Meetings Test", dependsOnGroups = {"login"})
+    @Test(testName = "QTAF-573", description = "Meetings Test", dependsOnGroups = {"login"})
     public void testMeetings(){
         // Navigate to meetings page
         topNavbar.openMobileMenu();
