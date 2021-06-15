@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: selenium-opera
-          image: selenium/standalone-opera
+          image: selenium/standalone-opera-debug
           ports:
             - containerPort: 4444
