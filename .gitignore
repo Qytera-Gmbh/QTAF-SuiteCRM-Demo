@@ -18,6 +18,10 @@ videos/
 .idea/**/dictionaries
 .idea/**/shelf
 
+# Terraform
+
+**/.terraform
+
 # Generated files
 .idea/**/contentModel.xml
 
