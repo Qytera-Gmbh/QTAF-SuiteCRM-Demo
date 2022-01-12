@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "terraform-state-suitecrm"
+    bucket = "terraform-suitecrm-state"
     key    = "core/terraform.tfstate"
-    region = "us-east-1"
+    region = "eu-central-1"
   }
 }
