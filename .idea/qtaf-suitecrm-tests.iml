@@ -12,7 +12,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-core:2022-02-02-SNAPSHOT-01" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-core:2022-02-15-SNAPSHOT-04" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-java:4.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-api:4.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-chrome-driver:4.1.1" level="project" />
@@ -217,6 +217,7 @@
     <orderEntry type="library" name="Maven: io.pebbletemplates:pebble:3.1.5" level="project" />
     <orderEntry type="library" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: net.lingala.zip4j:zip4j:2.9.1" level="project" />
+    <orderEntry type="library" name="Maven: io.qameta.allure:allure-model:2.17.2" level="project" />
     <orderEntry type="library" name="Maven: com.github.javafaker:javafaker:1.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.5" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:android:1.23" level="project" />
