@@ -51,7 +51,7 @@ jobs:
 
         
       - name: Build with Maven
-        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome" -DpageUrl="http://localhost:8080" Ddriver.remoteUrl="http://localhost:4444/wd/hub"
+        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome" -DpageUrl="http://localhost:8080" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
 
 
       - name: Deploy to GitHub Pages
