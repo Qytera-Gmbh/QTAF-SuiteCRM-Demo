@@ -49,9 +49,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-buildx-
 
-      - name: Cache Maven Dependencies
-        run: mvn -s ${{ github.workspace }}/.github/settings.xml  exec:java -Dexec.mainClass=${{ github.workspace }}/de.qytera.suite_crm.TestRunner -Ddriver.name="chrome" -DpageUrl="http://localhost:8080"
-
+   
       - name: Build with Maven
         run: mvn -s ${{ github.workspace }}/.github/settings.xml  exec:java -Dexec.mainClass=${{ github.workspace }}/de.qytera.suite_crm.TestRunner -Ddriver.name="chrome" -DpageUrl="http://localhost:8080"
 
