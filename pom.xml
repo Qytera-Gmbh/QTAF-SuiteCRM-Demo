@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -35,7 +35,7 @@
         </resources>
 
         <plugins>
-            <!-- Plugin to build a JAR file -->
+            <!-- Plugin to build a JAR file
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -45,7 +45,6 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>/</classpathPrefix>
-                            <!-- Test runner class that runs all tests -->
                             <mainClass>de.qytera.suite_crm.TestRunner</mainClass>
                         </manifest>
                     </archive>
@@ -64,7 +63,7 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
