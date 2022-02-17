@@ -17,7 +17,7 @@
         <dependency>
             <groupId>de.qytera.qtaf</groupId>
             <artifactId>qtaf-core</artifactId>
-            <version>0.0.3</version>
+            <version>0.0.4</version>
         </dependency>
         <dependency>
             <groupId>com.github.javafaker</groupId>
@@ -35,7 +35,7 @@
         </resources>
 
         <plugins>
-            <!-- Plugin to build a JAR file
+            <!-- Plugin to build a JAR file -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -63,7 +63,7 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                 </configuration>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
 
