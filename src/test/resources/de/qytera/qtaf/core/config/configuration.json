@@ -16,8 +16,8 @@
   "xray":{
     "enabled":false,
     "authentication":{
-      "client_id":null,
-      "client_secret":null
+      "clientId": "F5CD126E02DC4E53B117E0E0EEBE66B8",
+      "clientSecret": "cc85369ceb20f0daf89a87635701d85caa42cd6210ea72afc6c1acca9c42c062"
     }
   },
   "htmlReport":{
