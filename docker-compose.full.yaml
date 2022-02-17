@@ -1,0 +1,67 @@
+version: '3'
+services:
+
+  # Suite CRM database
+  mariadb:
+    image: 'docker.io/bitnami/mariadb:10.3-debian-10'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=bn_suitecrm
+      - MARIADB_DATABASE=bitnami_suitecrm
+    volumes:
+      - 'mariadb_data:/bitnami/mariadb'
+
+  # Suite CRM app
+  suitecrm:
+    image: 'docker.io/bitnami/suitecrm:7-debian-10'
+    ports:
+      - '80:8080'
+      - '443:8443'
+    environment:
+      - SUITECRM_DATABASE_HOST=mariadb
+      - SUITECRM_DATABASE_PORT_NUMBER=3306
+      - SUITECRM_DATABASE_USER=bn_suitecrm
+      - SUITECRM_DATABASE_NAME=bitnami_suitecrm
+      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - 'suitecrm_data:/bitnami/suitecrm'
+    depends_on:
+      - mariadb
+
+  # Selenium chrome
+  selenium-chrome:
+    image: selenium/standalone-chrome
+    ports:
+      - '4444:4444'
+      - '7900:7900'
+    restart: always
+
+  # Selenium firefox
+  selenium-firefox:
+    image: selenium/standalone-firefox
+    ports:
+      - '4445:4444'
+      - '7901:7900'
+    restart: always
+
+  # Selenium opera
+  selenium-opera:
+    image: selenium/standalone-opera
+    ports:
+      - '4446:4444'
+      - '7902:7900'
+    restart: always
+
+  # Selenium edge
+  selenium-edge:
+    image: selenium/standalone-edge:91.0
+    ports:
+      - '4447:4444'
+      - '7903:7900'
+    restart: always
+
+volumes:
+  mariadb_data:
+    driver: local
+  suitecrm_data:
+    driver: local
