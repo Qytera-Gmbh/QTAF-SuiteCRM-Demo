@@ -10,9 +10,7 @@ on:
 
 
 jobs:
-  test:
-    env:
-      
+  test:  
     runs-on: ubuntu-latest # runner
 
     services:
