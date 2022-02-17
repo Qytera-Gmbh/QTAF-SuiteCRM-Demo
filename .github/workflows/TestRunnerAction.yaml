@@ -71,8 +71,8 @@ jobs:
       - name: docker ps        
         run: docker ps -a
         
-      - name: docker loug crm      
-        run: docker log suitecrm
+      - name: docker log crm      
+        run: docker logs suitecrm
         
       - name: docker logs maria       
         run: docker logs mariadb
