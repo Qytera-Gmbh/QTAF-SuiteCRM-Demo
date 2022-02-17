@@ -119,7 +119,7 @@ jobs:
         
       - name: Copy Report
         if: always()
-        run: DIR1=$(ls ./logs | head -1); DIR2=$(ls .logs/$DIR1 | head -1); cp ./logs/$DIR1/$DIR2/Report.html ./logs/index.html
+        run: DIR1=$(ls ./logs | head -1); DIR2=$(ls ./logs/$DIR1 | head -1); cp ./logs/$DIR1/$DIR2/Report.html ./logs/index.html
 
 
       - name: Deploy to GitHub Pages
