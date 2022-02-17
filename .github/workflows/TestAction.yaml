@@ -71,9 +71,6 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-
-      - name: Build the docker-compose stack
-        run: docker-compose -f ${{ github.workspace }}/docker-compose.suitecrm.yml up -d
         
       - name: Build with Maven
         run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome-remote" -DpageUrl="http://suitecrm-demo.eba-zmr29pdh.eu-central-1.elasticbeanstalk.com/index.php" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
