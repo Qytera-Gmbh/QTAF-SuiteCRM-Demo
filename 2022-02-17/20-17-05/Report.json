@@ -1,5 +1,5 @@
 {
-  "uuid": "2f184ff5-d01e-4a7a-99ec-a21af780b39f",
+  "uuid": "6b8fff7a-c606-4593-b581-4b4aeaf016ff",
   "suiteInfo": {
     "name": "Command line suite",
     "outputDir": "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/target/surefire-reports/Command line suite"
@@ -7,24 +7,24 @@
   "osName": "Linux",
   "driverName": "chrome-remote",
   "tags": {},
-  "start": "Feb 17, 2022, 8:02:51 PM",
-  "end": "Feb 17, 2022, 8:02:53 PM",
-  "duration": 6724,
-  "logDirectory": "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/logs/2022-02-17/20-02-49",
+  "start": "Feb 17, 2022, 8:17:08 PM",
+  "end": "Feb 17, 2022, 8:17:10 PM",
+  "duration": 2091,
+  "logDirectory": "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/logs/2022-02-17/20-17-05",
   "testFeatureLogCollections": [
     {
-      "featureId": 1899280551,
+      "featureId": 1000592566,
       "featureName": "Calls form",
       "featureDescription": "",
       "testScenarioLogCollection": [
         {
-          "featureId": 1899280551,
+          "featureId": 1000592566,
           "scenarioId": "de.qytera.suite_crm.tests.QyteraTest.testCalls",
           "scenarioName": "QTAF-567",
           "description": "Calls Test",
-          "start": "Feb 17, 2022, 8:02:51 PM",
-          "end": "Feb 17, 2022, 8:02:53 PM",
-          "duration": 1819,
+          "start": "Feb 17, 2022, 8:17:08 PM",
+          "end": "Feb 17, 2022, 8:17:10 PM",
+          "duration": 1849,
           "threadId": 1,
           "threadName": "main",
           "groups": [],
