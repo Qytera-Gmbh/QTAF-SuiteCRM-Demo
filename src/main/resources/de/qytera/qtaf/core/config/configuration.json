@@ -1,4 +1,5 @@
 {
+  "pageUrl": "http://localhost:80",
   "tests":{
     "suite":{
       "name":""
