@@ -73,7 +73,7 @@ jobs:
             ${{ runner.os }}-buildx-
         
       - name: Build with Maven
-        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome-remote" -DpageUrl="http://suitecrm-demo.eba-zmr29pdh.eu-central-1.elasticbeanstalk.com/index.php" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
+        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome-remote" -DpageUrl="http://localhost:80" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
 
 
       - name: Deploy to GitHub Pages
