@@ -50,4 +50,7 @@ public class SuiteCRMTestContext extends QtafTestNGContext {
 
     @Inject
     protected TasksPage tasksPage;
+
+    @Inject
+    protected QyteraPO qyteraPO;
 }
