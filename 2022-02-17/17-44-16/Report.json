@@ -1,5 +1,5 @@
 {
-  "uuid": "69e71ff5-7a35-414d-af04-a4a25736b53f",
+  "uuid": "541a3b6b-2c21-47f8-ad73-c4e89e8f0a85",
   "suiteInfo": {
     "name": "Command line suite",
     "outputDir": "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/target/surefire-reports/Command line suite"
@@ -7,24 +7,24 @@
   "osName": "Linux",
   "driverName": "chrome-remote",
   "tags": {},
-  "start": "Feb 17, 2022, 4:42:45 PM",
-  "end": "Feb 17, 2022, 4:42:46 PM",
-  "duration": 832,
-  "logDirectory": "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/logs/2022-02-17/16-42-43",
+  "start": "Feb 17, 2022, 5:44:18 PM",
+  "end": "Feb 17, 2022, 5:44:19 PM",
+  "duration": 5720,
+  "logDirectory": "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/logs/2022-02-17/17-44-16",
   "testFeatureLogCollections": [
     {
-      "featureId": 899068489,
-      "featureName": "QTAF-496",
+      "featureId": 779876279,
+      "featureName": "Login Form",
       "featureDescription": "",
       "testScenarioLogCollection": [
         {
-          "featureId": 899068489,
+          "featureId": 779876279,
           "scenarioId": "de.qytera.suite_crm.tests.LoginTest.testLogin",
           "scenarioName": "QTAF-496",
           "description": "Login Test",
-          "start": "Feb 17, 2022, 4:42:45 PM",
-          "end": "Feb 17, 2022, 4:42:46 PM",
-          "duration": 304,
+          "start": "Feb 17, 2022, 5:44:18 PM",
+          "end": "Feb 17, 2022, 5:44:19 PM",
+          "duration": 279,
           "threadId": 1,
           "threadName": "main",
           "groups": [],
@@ -34,24 +34,24 @@
           "status": "FAILURE",
           "logMessages": [],
           "screenshotPaths": [
-            "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/logs/2022-02-17/16-42-43/Failed_2022-02-17_16-42-46.png"
+            "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/logs/2022-02-17/17-44-16/Failed_2022-02-17_17-44-19.png"
           ],
           "tags": {}
         }
       ]
     },
     {
-      "featureId": 1875718595,
+      "featureId": 1626149608,
       "featureName": "QTAF-567",
       "featureDescription": "",
       "testScenarioLogCollection": [
         {
-          "featureId": 1875718595,
+          "featureId": 1626149608,
           "scenarioId": "de.qytera.suite_crm.tests.CallsTest.testCalls",
           "scenarioName": "QTAF-567",
           "description": "Calls Test",
-          "start": "Feb 17, 2022, 4:42:46 PM",
-          "end": "Feb 17, 2022, 4:42:46 PM",
+          "start": "Feb 17, 2022, 5:44:19 PM",
+          "end": "Feb 17, 2022, 5:44:19 PM",
           "duration": 0,
           "threadId": 1,
           "threadName": "main",
@@ -69,17 +69,17 @@
       ]
     },
     {
-      "featureId": 1651923692,
+      "featureId": 1976503781,
       "featureName": "QTAF-568",
       "featureDescription": "",
       "testScenarioLogCollection": [
         {
-          "featureId": 1651923692,
+          "featureId": 1976503781,
           "scenarioId": "de.qytera.suite_crm.tests.ContactsTest.testContacts",
           "scenarioName": "QTAF-568",
           "description": "Contacts Test",
-          "start": "Feb 17, 2022, 4:42:46 PM",
-          "end": "Feb 17, 2022, 4:42:46 PM",
+          "start": "Feb 17, 2022, 5:44:19 PM",
+          "end": "Feb 17, 2022, 5:44:19 PM",
           "duration": 0,
           "threadId": 1,
           "threadName": "main",
@@ -97,17 +97,17 @@
       ]
     },
     {
-      "featureId": 977278793,
+      "featureId": 1182888954,
       "featureName": "QTAF-573",
       "featureDescription": "",
       "testScenarioLogCollection": [
         {
-          "featureId": 977278793,
+          "featureId": 1182888954,
           "scenarioId": "de.qytera.suite_crm.tests.MeetingsTest.testMeetings",
           "scenarioName": "QTAF-573",
           "description": "Meetings Test",
-          "start": "Feb 17, 2022, 4:42:46 PM",
-          "end": "Feb 17, 2022, 4:42:46 PM",
+          "start": "Feb 17, 2022, 5:44:19 PM",
+          "end": "Feb 17, 2022, 5:44:19 PM",
           "duration": 0,
           "threadId": 1,
           "threadName": "main",
@@ -125,17 +125,17 @@
       ]
     },
     {
-      "featureId": 669132924,
+      "featureId": 1868288866,
       "featureName": "QTAF-572",
       "featureDescription": "",
       "testScenarioLogCollection": [
         {
-          "featureId": 669132924,
+          "featureId": 1868288866,
           "scenarioId": "de.qytera.suite_crm.tests.TasksTest.testTasks",
           "scenarioName": "QTAF-572",
           "description": "Tasks Test",
-          "start": "Feb 17, 2022, 4:42:46 PM",
-          "end": "Feb 17, 2022, 4:42:46 PM",
+          "start": "Feb 17, 2022, 5:44:19 PM",
+          "end": "Feb 17, 2022, 5:44:19 PM",
           "duration": 0,
           "threadId": 1,
           "threadName": "main",
