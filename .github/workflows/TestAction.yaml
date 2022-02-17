@@ -87,7 +87,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-buildx-
       - name: sleep
-        run: sleep 30
+        run: sleep 60
         
       - name: docker ps        
         run: docker ps -a
