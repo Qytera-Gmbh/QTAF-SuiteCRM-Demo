@@ -104,6 +104,19 @@ jobs:
       - name: Build with Maven
         run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome-remote" -DpageUrl="localhost:8080" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
         
+        
+      - name: docker ps 2    
+        if: always() 
+        run: docker ps -a
+        
+      - name: docker log crm 2  
+        if: always()
+        run: docker logs suitecrm
+        
+      - name: docker logs maria 2    
+        if: always()
+        run: docker logs mariadb
+        
       - name: Copy Report
         if: always()
         run: DIR1=$(ls ./logs | head -1); DIR2=$(ls .logs/$DIR1 | head -1); cp ./logs/$DIR1/$DIR2/Report.html ./logs/index.html
