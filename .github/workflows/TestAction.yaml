@@ -44,8 +44,8 @@ jobs:
       suitecrm:
         image: 'docker.io/bitnami/suitecrm:7-debian-10'
         ports:
-          - '80:8080'
-          - '443:8443'
+          - '8080:8080'
+          - '8443:8443'
         volumes:
           - 'suitecrm_data:/bitnami/suitecrm'
 
@@ -73,7 +73,7 @@ jobs:
             ${{ runner.os }}-buildx-
         
       - name: Build with Maven
-        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome-remote" -DpageUrl="http://localhost:80" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
+        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome-remote" -DpageUrl="http://localhost:8080" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
 
 
       - name: Deploy to GitHub Pages
