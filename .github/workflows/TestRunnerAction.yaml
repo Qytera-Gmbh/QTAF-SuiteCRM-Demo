@@ -66,5 +66,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-buildx-
             
-      - name: Set up JDK 17           
+      - name: docker ps        
+        run: docker ps -a
+            
+      - name: ping         
         run: curl http://127.0.0.1:8080
