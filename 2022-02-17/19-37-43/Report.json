@@ -1,5 +1,5 @@
 {
-  "uuid": "4e5a4f18-f117-4d36-8e3a-73db4b07b793",
+  "uuid": "e83a9aeb-d6d6-4bf6-98a7-e2ccc3f11656",
   "suiteInfo": {
     "name": "Command line suite",
     "outputDir": "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/target/surefire-reports/Command line suite"
@@ -7,10 +7,10 @@
   "osName": "Linux",
   "driverName": "chrome-remote",
   "tags": {},
-  "start": "Feb 17, 2022, 7:33:13 PM",
-  "end": "Feb 17, 2022, 7:33:43 PM",
-  "duration": 35893,
-  "logDirectory": "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/logs/2022-02-17/19-33-10",
+  "start": "Feb 17, 2022, 7:37:44 PM",
+  "end": "Feb 17, 2022, 7:38:15 PM",
+  "duration": 33122,
+  "logDirectory": "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/logs/2022-02-17/19-37-43",
   "testFeatureLogCollections": [
     {
       "featureId": 1159329398,
@@ -22,9 +22,9 @@
           "scenarioId": "de.qytera.suite_crm.tests.LoginTest.testLogin",
           "scenarioName": "QTAF-496",
           "description": "Login Test",
-          "start": "Feb 17, 2022, 7:33:13 PM",
-          "end": "Feb 17, 2022, 7:33:43 PM",
-          "duration": 30213,
+          "start": "Feb 17, 2022, 7:37:44 PM",
+          "end": "Feb 17, 2022, 7:38:15 PM",
+          "duration": 30203,
           "threadId": 1,
           "threadName": "main",
           "groups": [],
@@ -34,7 +34,7 @@
           "status": "FAILURE",
           "logMessages": [],
           "screenshotPaths": [
-            "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/logs/2022-02-17/19-33-10/Failed_2022-02-17_19-33-43.png"
+            "/home/runner/work/QTAF-SuiteCRM-Demo/QTAF-SuiteCRM-Demo/logs/2022-02-17/19-37-43/Failed_2022-02-17_19-38-15.png"
           ],
           "tags": {}
         }
@@ -50,8 +50,8 @@
           "scenarioId": "de.qytera.suite_crm.tests.CallsTest.testCalls",
           "scenarioName": "QTAF-567",
           "description": "Calls Test",
-          "start": "Feb 17, 2022, 7:33:43 PM",
-          "end": "Feb 17, 2022, 7:33:43 PM",
+          "start": "Feb 17, 2022, 7:38:15 PM",
+          "end": "Feb 17, 2022, 7:38:15 PM",
           "duration": 0,
           "threadId": 1,
           "threadName": "main",
@@ -78,8 +78,8 @@
           "scenarioId": "de.qytera.suite_crm.tests.ContactsTest.testContacts",
           "scenarioName": "QTAF-568",
           "description": "Contacts Test",
-          "start": "Feb 17, 2022, 7:33:43 PM",
-          "end": "Feb 17, 2022, 7:33:43 PM",
+          "start": "Feb 17, 2022, 7:38:15 PM",
+          "end": "Feb 17, 2022, 7:38:15 PM",
           "duration": 0,
           "threadId": 1,
           "threadName": "main",
@@ -106,8 +106,8 @@
           "scenarioId": "de.qytera.suite_crm.tests.MeetingsTest.testMeetings",
           "scenarioName": "QTAF-573",
           "description": "Meetings Test",
-          "start": "Feb 17, 2022, 7:33:43 PM",
-          "end": "Feb 17, 2022, 7:33:43 PM",
+          "start": "Feb 17, 2022, 7:38:15 PM",
+          "end": "Feb 17, 2022, 7:38:15 PM",
           "duration": 0,
           "threadId": 1,
           "threadName": "main",
@@ -134,8 +134,8 @@
           "scenarioId": "de.qytera.suite_crm.tests.TasksTest.testTasks",
           "scenarioName": "QTAF-572",
           "description": "Tasks Test",
-          "start": "Feb 17, 2022, 7:33:43 PM",
-          "end": "Feb 17, 2022, 7:33:43 PM",
+          "start": "Feb 17, 2022, 7:38:15 PM",
+          "end": "Feb 17, 2022, 7:38:15 PM",
           "duration": 0,
           "threadId": 1,
           "threadName": "main",
