@@ -82,4 +82,4 @@ jobs:
         run: docker logs mariadb
 
       - name: ping         
-        run: curl http://suitecrm:8080
+        run: curl http://127.0.0.1:8080
