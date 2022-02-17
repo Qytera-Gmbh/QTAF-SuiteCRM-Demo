@@ -50,7 +50,7 @@ jobs:
             ${{ runner.os }}-buildx-
 
       - name: Build the docker-compose stack
-        run: docker-compose -f docker.compose.suitecrm.yaml up -d
+        run: docker-compose -f docker-compose.suitecrm.yaml up -d
         
       - name: Build with Maven
         run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome-remote" -DpageUrl="http://localhost:8080" -Ddriver.remoteUrl="http://suitecrm-demo.eba-zmr29pdh.eu-central-1.elasticbeanstalk.com"
