@@ -1,0 +1,22 @@
+{
+  "uuid": "eae0e40a-7572-4d16-b427-100623187afe",
+  "historyId": "de.qytera.suite_crm.tests.QyteraTest.testCalls",
+  "fullName": "de.qytera.suite_crm.tests.QyteraTest.testCalls",
+  "labels": [],
+  "links": [],
+  "name": "Calls Test",
+  "status": "PASSED",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "",
+    "trace": ""
+  },
+  "stage": "FINISHED",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "start": 1645129028306,
+  "stop": 1645129030155
+}
