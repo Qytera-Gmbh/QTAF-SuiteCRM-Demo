@@ -102,7 +102,7 @@ jobs:
         run: curl http://127.0.0.1:8080
         
       - name: Build with Maven
-        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome-remote" -DpageUrl="http://127.0.0.1:8080/" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
+        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome-remote" -DpageUrl="localhost:8080" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
         
       - name: Copy Report
         run: DIR1=$(ls ./logs | head -1); DIR2=$(ls .logs/$DIR1 | head -1); cp ./logs/$DIR1/$DIR2/Report.html ./logs/index.html
