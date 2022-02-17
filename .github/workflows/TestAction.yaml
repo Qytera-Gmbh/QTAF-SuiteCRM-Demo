@@ -53,7 +53,7 @@ jobs:
         run: docker-compose up -d
         
       - name: Build with Maven
-        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome-remote" -DpageUrl="http://localhost:8080" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
+        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test -Ddriver.name="chrome-remote" -DpageUrl="http://localhost:8080" -Ddriver.remoteUrl="http://suitecrm-demo.eba-zmr29pdh.eu-central-1.elasticbeanstalk.com"
 
 
       - name: Deploy to GitHub Pages
