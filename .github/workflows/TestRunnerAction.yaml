@@ -39,6 +39,7 @@ jobs:
        image: 'docker.io/bitnami/mariadb:10.3-debian-10'
        volumes:
           - 'mariadb_data:/bitnami/mariadb'
+       options: --name mariadb
 
   # Suite CRM app
       suitecrm:
@@ -48,7 +49,8 @@ jobs:
           - '8443:8443'
         volumes:
           - 'suitecrm_data:/bitnami/suitecrm'
-
+        options: --name suitecrm
+        
     steps:
 
       - uses: actions/checkout@v2
@@ -68,6 +70,12 @@ jobs:
             
       - name: docker ps        
         run: docker ps -a
-            
+        
+      - name: docker loug crm      
+        run: docker log suitecrm
+        
+      - name: docker logs maria       
+        run: docker logs mariadb
+
       - name: ping         
         run: curl http://127.0.0.1:8080
