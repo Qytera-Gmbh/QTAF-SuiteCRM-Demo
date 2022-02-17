@@ -1,0 +1,48 @@
+{
+  "errorLogs": [
+    {
+      "type": "",
+      "stack": [
+        "de.qytera.qtaf.testng.event_subscriber.TestNGLoggingSubscriber.log(TestNGLoggingSubscriber.java:226)",
+        "de.qytera.qtaf.testng.event_subscriber.TestNGLoggingSubscriber.onTestSkipped(TestNGLoggingSubscriber.java:201)",
+        "rx.internal.util.ActionSubscriber.onNext(ActionSubscriber.java:39)",
+        "rx.observers.SafeSubscriber.onNext(SafeSubscriber.java:134)",
+        "rx.subjects.PublishSubject$PublishSubjectProducer.onNext(PublishSubject.java:304)",
+        "rx.subjects.PublishSubject$PublishSubjectState.onNext(PublishSubject.java:219)",
+        "rx.subjects.PublishSubject.onNext(PublishSubject.java:72)",
+        "de.qytera.qtaf.testng.event_listener.TestNGEventListener.onTestSkipped(TestNGEventListener.java:140)",
+        "org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:61)",
+        "org.testng.internal.Invoker.runTestListeners(Invoker.java:1389)",
+        "org.testng.internal.Invoker.registerSkippedTestResult(Invoker.java:1063)",
+        "org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)",
+        "org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)",
+        "org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)",
+        "org.testng.TestRunner.privateRun(TestRunner.java:648)",
+        "org.testng.TestRunner.run(TestRunner.java:505)",
+        "org.testng.SuiteRunner.runTest(SuiteRunner.java:455)",
+        "org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)",
+        "org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)",
+        "org.testng.SuiteRunner.run(SuiteRunner.java:364)",
+        "org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)",
+        "org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)",
+        "org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)",
+        "org.testng.TestNG.runSuitesLocally(TestNG.java:1137)",
+        "org.testng.TestNG.runSuites(TestNG.java:1049)",
+        "org.testng.TestNG.run(TestNG.java:1017)",
+        "org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)",
+        "org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)",
+        "org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)",
+        "org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)",
+        "java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)",
+        "java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)",
+        "java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)",
+        "java.base/java.lang.reflect.Method.invoke(Method.java:568)",
+        "org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)",
+        "org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)",
+        "org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)",
+        "org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)",
+        "org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)"
+      ]
+    }
+  ]
+}
