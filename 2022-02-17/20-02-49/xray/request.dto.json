@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "testKey": "QTAF-567",
+      "comment": "",
+      "status": "PASS",
+      "evidences": [],
+      "steps": []
+    }
+  ],
+  "info": {
+    "testEnvironments": [
+      "Linux",
+      "chrome-remote"
+    ]
+  }
+}
