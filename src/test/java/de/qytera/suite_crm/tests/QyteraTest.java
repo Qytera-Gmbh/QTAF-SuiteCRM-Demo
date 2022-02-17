@@ -12,7 +12,7 @@ import javax.inject.Singleton;
 )
 @Singleton
 public class QyteraTest extends SuiteCRMTestContext {
-    @Test(testName = "QTAF-567", description = "Calls Test", dependsOnGroups = {"login"})
+    @Test(testName = "QTAF-567", description = "Calls Test")
     public void testCalls() {
         //Navigate to calls page
         qyteraPO.goToRootPage();
