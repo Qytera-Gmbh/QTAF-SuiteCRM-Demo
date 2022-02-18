@@ -1,9 +1,9 @@
 {
   "tests": [
     {
-      "testKey": "QTAF-567",
+      "testKey": "QTAF-754",
       "comment": "",
-      "status": "FAIL",
+      "status": "PASS",
       "evidences": [],
       "steps": [
         {
@@ -13,7 +13,7 @@
           "defects": []
         },
         {
-          "status": "FAILED",
+          "status": "PASSED",
           "comment": "bla",
           "evidences": [],
           "defects": []
