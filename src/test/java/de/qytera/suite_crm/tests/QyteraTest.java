@@ -16,5 +16,6 @@ public class QyteraTest extends SuiteCRMTestContext {
     public void testCalls() {
         //Navigate to calls page
         qyteraPO.goToRootPage();
+        qyteraPO.goToSolutions();
     }
 }

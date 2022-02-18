@@ -9,47 +9,6 @@ import javax.inject.Inject;
 @PageObject
 public class SuiteCRMTestContext extends QtafTestNGContext {
 
-    @Inject
-    protected Navigator navigator;
-
-    @Inject
-    protected LoginFormPO loginForm;
-
-    @Inject
-    protected TopNavbar topNavbar;
-
-    @Inject
-    protected TopBarMenu topBarMenu;
-
-    @Inject
-    protected TopBarCallsMenu topBarCallsMenu;
-
-    @Inject
-    protected CalendarPage calendarPage;
-
-    @Inject
-    protected CreateContactPage createContactPage;
-
-    @Inject
-    protected CreateContactForm createContactForm;
-
-    @Inject
-    protected CreateMeetingPage createMeetingPage;
-
-    @Inject
-    protected CreateMeetingForm createMeetingForm;
-
-    @Inject
-    protected CallsPage callsPage;
-
-    @Inject
-    protected CreateCallPage createCallPage;
-
-    @Inject
-    protected CreateCallForm createCallForm;
-
-    @Inject
-    protected TasksPage tasksPage;
 
     @Inject
     protected QyteraPO qyteraPO;
