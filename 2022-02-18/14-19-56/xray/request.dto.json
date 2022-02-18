@@ -1,0 +1,30 @@
+{
+  "tests": [
+    {
+      "testKey": "QTAF-567",
+      "comment": "",
+      "status": "FAIL",
+      "evidences": [],
+      "steps": [
+        {
+          "status": "PASSED",
+          "comment": "Go to Qytera main page",
+          "evidences": [],
+          "defects": []
+        },
+        {
+          "status": "FAILED",
+          "comment": "bla",
+          "evidences": [],
+          "defects": []
+        }
+      ]
+    }
+  ],
+  "info": {
+    "testEnvironments": [
+      "Linux",
+      "chrome-remote"
+    ]
+  }
+}
