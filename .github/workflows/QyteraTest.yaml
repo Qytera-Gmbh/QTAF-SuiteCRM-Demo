@@ -53,7 +53,7 @@ jobs:
 
         
       - name: Build with Maven
-        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test=TestRunner -Ddriver.name="chrome-remote" -DpageUrl="https://www.qytera.de" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
+        run: mvn -s ${{ github.workspace }}/.github/settings.xml  clean test=TestRunner#run test -Ddriver.name="chrome-remote" -DpageUrl="https://www.qytera.de" -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
         
     
       - name: Copy Report
