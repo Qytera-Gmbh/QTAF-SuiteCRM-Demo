@@ -30,7 +30,7 @@ public class QyteraPO extends SuiteCRMTestContext {
             description = "blabla"
     )
     public void goToSolutions(){
-        driver.findElement(solutions).click();
+        driver.findElement(solutions).isDisplayed();
     }
 
 }
