@@ -3,7 +3,7 @@
     {
       "testKey": "QTAF-567",
       "comment": "",
-      "status": "PASS",
+      "status": "FAIL",
       "evidences": [],
       "steps": []
     }
