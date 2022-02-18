@@ -6,10 +6,10 @@ import de.qytera.qtaf.core.guice.annotations.Step;
 import de.qytera.suite_crm.SuiteCRMTestContext;
 import org.openqa.selenium.By;
 
-import javax.inject.Singleton;
 
 
-@Singleton
+
+
 public class QyteraPO extends SuiteCRMTestContext {
     public static final By solutions = By.id("menu-438-1");
 
@@ -22,6 +22,7 @@ public class QyteraPO extends SuiteCRMTestContext {
         String url = configMap.getString("pageUrl", "https://www.qytera.de");
         System.out.println("Page URL: " + url);
         driver.get(url);
+        driver.manage().window().maximize();
     }
 
     @Step(

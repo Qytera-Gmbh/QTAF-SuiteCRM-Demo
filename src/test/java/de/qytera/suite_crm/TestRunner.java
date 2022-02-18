@@ -7,4 +7,5 @@ import de.qytera.qtaf.testng.QtafTestNGRunner;
  * This class inherits from QtafTestNGRunner which provides a main function that can be executed.
  */
 public class TestRunner extends QtafTestNGRunner {
+
 }
