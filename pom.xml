@@ -9,15 +9,25 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>de.qytera.qtaf</groupId>
-            <artifactId>qtaf-core</artifactId>
-            <version>0.0.5</version>
+            <artifactId>qtaf</artifactId>
+            <version>2022-03-03-SNAPSHOT-02</version>
+        </dependency>
+        <dependency>
+            <groupId>de.qytera.qtaf</groupId>
+            <artifactId>qtaf-html-report-plugin</artifactId>
+            <version>2022-03-03-SNAPSHOT-02</version>
+        </dependency>
+        <dependency>
+            <groupId>de.qytera.qtaf</groupId>
+            <artifactId>qtaf-xray-plugin</artifactId>
+            <version>2022-03-03-SNAPSHOT-02</version>
         </dependency>
         <dependency>
             <groupId>com.github.javafaker</groupId>
@@ -45,6 +55,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>/</classpathPrefix>
+                            <!-- Test runner class that runs all tests -->
                             <mainClass>de.qytera.suite_crm.TestRunner</mainClass>
                         </manifest>
                     </archive>
