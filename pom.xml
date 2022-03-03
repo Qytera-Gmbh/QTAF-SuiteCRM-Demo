@@ -16,8 +16,18 @@
     <dependencies>
         <dependency>
             <groupId>de.qytera.qtaf</groupId>
-            <artifactId>qtaf-core</artifactId>
-            <version>2022-02-02-SNAPSHOT-01</version>
+            <artifactId>qtaf</artifactId>
+            <version>2022-03-03-SNAPSHOT-02</version>
+        </dependency>
+        <dependency>
+            <groupId>de.qytera.qtaf</groupId>
+            <artifactId>qtaf-html-report-plugin</artifactId>
+            <version>2022-03-03-SNAPSHOT-02</version>
+        </dependency>
+        <dependency>
+            <groupId>de.qytera.qtaf</groupId>
+            <artifactId>qtaf-xray-plugin</artifactId>
+            <version>2022-03-03-SNAPSHOT-02</version>
         </dependency>
         <dependency>
             <groupId>com.github.javafaker</groupId>
