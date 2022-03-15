@@ -3,6 +3,8 @@ resource "aws_elastic_beanstalk_application" "application" {
   description = "SuiteCRM Demo Project"
 }
 
+variable "instance" {}
+
 resource "aws_elastic_beanstalk_environment" "environment" {
   name                = "suitecrm-demo"
   application         = aws_elastic_beanstalk_application.application.name
@@ -19,7 +21,7 @@ resource "aws_elastic_beanstalk_environment" "environment" {
   setting {
     namespace = "aws:autoscaling:launchconfiguration"
     name = "InstanceType"
-    value = "t2.large"
+    value = var.instance
   }
 
   setting {
