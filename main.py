@@ -1,51 +1,105 @@
 import os, subprocess, time, sys, re
 import reactivex as rx
 
+
+class Process:
+    def __init__(self, cmd: list, print_stdout=False):
+        self.cmd = cmd
+        self.print_stdout = print_stdout
+        self.p = None
+        self.exit_code = None
+        self.on_stdout_readline = rx.subject.Subject()
+        self.on_process_start = rx.subject.Subject()
+        self.on_process_finished = rx.subject.Subject()
+        self.last_line = ""
+        self.out = []
+        self.err = []
+        self.finished = False
+
+    def stdout_logger(self, p):
+        self.out.append(p.get_last_line_from_stdout())
+        print(p.get_last_line_from_stdout())
+
+    def register_stdout_readline_handler(self, f):
+        self.on_stdout_readline.subscribe(f)
+
+    def write(self, value: str):
+        self.get_stdin().write(value)
+        self.get_stdin().flush()
+
+    def get_last_line_from_stdout(self) -> str:
+        return self.last_line
+
+    def get_stdin(self):
+        return self.p.stdin
+
+    def get_stdout(self):
+        return self.p.stdout
+
+    def get_stderr(self):
+        return self.p.stderr
+
+    def get_output() -> list:
+        return self.out
+
+    def get_error() -> list:
+        return self.err
+
+    def is_finished() -> bool:
+        return self.finished
+
+    def run(self):
+        # Check if process was already executed
+        if self.finished:
+            return self.out, self.err, self.exit_code
+
+        # Register event handlers
+        if (self.print_stdout):
+            self.register_stdout_readline_handler(self.stdout_logger)
+
+        # Start process
+        self.on_process_start.on_next(None)
+        self.on_process_start.on_completed()
+
+        self.p = subprocess.Popen(
+            self.cmd,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+
+        # Iterate over stdout
+        for line in iter(self.p.stdout.readline, b''):
+            # Decode byte array from stdout
+            self.last_line = line.rstrip().decode("utf-8")
+            # Dispatch event
+            self.on_stdout_readline.on_next(self)
+
+        # Stdout handler
+        if (self.p.stderr):
+            for line in iter(self.p.stderr.readline, b''):
+                s = line.rstrip().decode("utf-8")
+                self.err.append(s)
+                print(s)
+
+        # Get exit code
+        self.exit_code = self.p.wait()
+        self.finished = True
+
+        self.on_stdout_readline.on_completed()
+        self.on_process_finished.on_next(None)
+        self.on_process_finished.on_completed()
+
+        return self.out, self.err, self.exit_code
+
+
 terraform_dir = "terraform"
 
-cmd_terraform_apply = ["terraform", "-chdir={}".format(terraform_dir), "apply"]
-cmd_terraform_destroy = ["terraform", "-chdir={}".format(terraform_dir), "destroy"]
-cmd_terraform_plan = ["terraform", "-chdir={}".format(terraform_dir), "plan"]
-cmd_test = ["python", "--version"]
-cmd_docker_ps = ["docker", "ps"]
-
-p = subprocess.Popen(cmd_terraform_plan,
-                     stdin=subprocess.PIPE,
-                     stdout=subprocess.PIPE,
-                     stderr=subprocess.PIPE)
-
-out = []
-err = []
-
-subject_out = rx.subject.Subject()
-
-def stdout_logger(p):
-    out.append(p["s"])
-    print(p["s"])
-
 def stdin_writer(p):
-    if (len(re.findall("var.instance", p["s"]))):
-        print("INPUT: var.instance")
-        p["stdin"].write('t2.xlarge\n'.encode("utf-8"))
-        p["stdin"].flush()
-    if ("Enter a value" in s):
-        print("INPUT: Enter a value")
-        #p["p"].terminate()
+    if (len(re.findall("var.instance", p.get_last_line_from_stdout()))):
+        p.write('t2.xlarge\n'.encode("utf-8"))
 
-
-# Print subscriber
-subject_out.subscribe(stdout_logger)
-subject_out.subscribe(stdin_writer)
-
-for line in iter(p.stdout.readline, b''):
-    s = line.rstrip().decode("utf-8")
-    subject_out.on_next({"p": p, "s": s, "stdin": p.stdin, "stdout": p.stdout, "stderr": p.stderr})
-
-if (p.stderr):
-    for line in iter(p.stderr.readline, b''):
-        s = line.rstrip().decode("utf-8")
-        err.append(s)
-        print(s)
-
-exit_code = p.wait()
-print("DONE", len(out), len(err), exit_code)
+p = Process(["terraform", "-chdir={}".format(terraform_dir), "plan"], print_stdout=True)
+p.register_stdout_readline_handler(stdin_writer)
+stdout, stderr, exit_code = p.run()
+print(len(stdout), len(stderr), exit_code)
