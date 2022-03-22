@@ -2,6 +2,7 @@ package de.qytera.suite_crm.tests;
 
 import de.qytera.qtaf.core.config.annotations.TestFeature;
 import de.qytera.suite_crm.SuiteCRMTestContext;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import javax.inject.Singleton;
@@ -29,5 +30,6 @@ public class CallsTest extends SuiteCRMTestContext {
         //Navigate to Home page
         topNavbar.openMobileMenu();
         topNavbar.clickHomeMenuFromNotHomePage();
+        Assert.assertEquals(2*2, 3);
     }
 }

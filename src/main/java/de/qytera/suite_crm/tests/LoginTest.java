@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import de.qytera.qtaf.core.config.annotations.TestFeature;
 import de.qytera.suite_crm.SuiteCRMTestContext;
 import org.openqa.selenium.Dimension;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import javax.inject.Singleton;
@@ -24,6 +25,5 @@ public class LoginTest extends SuiteCRMTestContext {
         loginForm.fillUsernameField("user");
         loginForm.fillPasswordField("bitnami");
         loginForm.clickSubmitButton();
-
     }
 }

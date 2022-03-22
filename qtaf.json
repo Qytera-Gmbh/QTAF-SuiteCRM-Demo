@@ -1,0 +1,50 @@
+{
+  "tasks": {
+    "env_up": [
+      "docker-compose up -d"
+    ],
+    "env_down": [
+      "docker-compose down"
+    ],
+    "aws_up": [
+      "docker-compose up -d"
+    ],
+    "aws_down": [
+      "docker-compose down"
+    ]
+  },
+  "envs": [
+    {
+      "vars": {"DRIVER_NAME":  "chrome"},
+      "groups": ["local"]
+    },
+    {
+      "vars": {"DRIVER_NAME":  "firefox"},
+      "groups": ["local"]
+    },
+    {
+      "vars": {"DRIVER_NAME":  "opera"},
+      "groups": ["local"]
+    },
+    {
+      "vars": {"DRIVER_NAME":  "edge"},
+      "groups": ["local"]
+    },
+    {
+      "vars": {"DRIVER_NAME":  "chrome-remote"},
+      "groups": ["remote"]
+    },
+    {
+      "vars": {"DRIVER_NAME":  "firefox-remote"},
+      "groups": ["remote"]
+    },
+    {
+      "vars": {"DRIVER_NAME":  "edge-remote"},
+      "groups": ["remote"]
+    },
+    {
+      "vars": {"DRIVER_NAME":  "opera-remote"},
+      "groups": ["remote"]
+    }
+  ]
+}
