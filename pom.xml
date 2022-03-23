@@ -17,22 +17,22 @@
         <dependency>
             <groupId>de.qytera.qtaf</groupId>
             <artifactId>qtaf</artifactId>
-            <version>2022-03-23-SNAPSHOT-01</version>
+            <version>2022-03-23-SNAPSHOT-04</version>
         </dependency>
         <dependency>
             <groupId>de.qytera.qtaf</groupId>
             <artifactId>qtaf-html-report-plugin</artifactId>
-            <version>2022-03-23-SNAPSHOT-01</version>
+            <version>2022-03-23-SNAPSHOT-04</version>
         </dependency>
         <dependency>
             <groupId>de.qytera.qtaf</groupId>
             <artifactId>qtaf-xray-plugin</artifactId>
-            <version>2022-03-23-SNAPSHOT-01</version>
+            <version>2022-03-23-SNAPSHOT-04</version>
         </dependency>
         <dependency>
             <groupId>de.qytera.qtaf</groupId>
             <artifactId>qtaf-allure-plugin</artifactId>
-            <version>2022-03-23-SNAPSHOT-01</version>
+            <version>2022-03-23-SNAPSHOT-04</version>
         </dependency>
         <dependency>
             <groupId>com.github.javafaker</groupId>
