@@ -28,38 +28,6 @@ services:
     depends_on:
       - mariadb
 
-  # Selenium chrome
-  selenium-chrome:
-    image: selenium/standalone-chrome
-    ports:
-      - '4444:4444'
-      - '7900:7900'
-    restart: always
-
-  # Selenium firefox
-  selenium-firefox:
-    image: selenium/standalone-firefox
-    ports:
-      - '4445:4444'
-      - '7901:7900'
-    restart: always
-
-  # Selenium opera
-  selenium-opera:
-    image: selenium/standalone-opera
-    ports:
-      - '4446:4444'
-      - '7902:7900'
-    restart: always
-
-  # Selenium edge
-  selenium-edge:
-    image: selenium/standalone-edge:91.0
-    ports:
-      - '4447:4444'
-      - '7903:7900'
-    restart: always
-
 volumes:
   mariadb_data:
     driver: local

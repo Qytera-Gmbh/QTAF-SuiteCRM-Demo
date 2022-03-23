@@ -80,7 +80,9 @@ def run_tests(n_parallel: int, groups: str):
 @cli.command()
 @click.argument("name")
 def task(name: str):
-    # Start docker containers
+    """
+    Run task from qtaf.json file
+    """
     cmds = data["tasks"][name]
     for cmd in cmds:
         arr = cmd.split(" ")
@@ -97,7 +99,7 @@ def env_up():
 @cli.command()
 def env_down():
     # Start docker containers
-    res_docker_up = run_docker_up()
+    res_docker_down = run_docker_down()
 
 if __name__ == '__main__':
     cli(obj={})

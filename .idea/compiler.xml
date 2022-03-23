@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="qtaf-suitecrm-tests" target="1.8" />
+      <module name="qtaf-suitecrm-tests" target="17" />
       <module name="SuiteCRMTestProject" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -15,35 +15,38 @@
   },
   "envs": [
     {
-      "vars": {"DRIVER_NAME":  "chrome"},
+      "vars": {"DRIVER_NAME": "chrome"},
       "groups": ["local"]
     },
     {
-      "vars": {"DRIVER_NAME":  "firefox"},
+      "vars": {
+        "DRIVER_NAME": "firefox",
+        "DRIVER_VERSION": "30.0"
+      },
       "groups": ["local"]
     },
     {
-      "vars": {"DRIVER_NAME":  "opera"},
+      "vars": {"DRIVER_NAME": "opera"},
       "groups": ["local"]
     },
     {
-      "vars": {"DRIVER_NAME":  "edge"},
+      "vars": {"DRIVER_NAME": "edge"},
       "groups": ["local"]
     },
     {
-      "vars": {"DRIVER_NAME":  "chrome-remote"},
+      "vars": {"DRIVER_NAME": "chrome-remote"},
       "groups": ["remote"]
     },
     {
-      "vars": {"DRIVER_NAME":  "firefox-remote"},
+      "vars": {"DRIVER_NAME": "firefox-remote"},
       "groups": ["remote"]
     },
     {
-      "vars": {"DRIVER_NAME":  "edge-remote"},
+      "vars": {"DRIVER_NAME": "edge-remote"},
       "groups": ["remote"]
     },
     {
-      "vars": {"DRIVER_NAME":  "opera-remote"},
+      "vars": {"DRIVER_NAME": "opera-remote"},
       "groups": ["remote"]
     }
   ]
