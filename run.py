@@ -20,8 +20,7 @@ def run_docker_down():
     p_docker_down = Process(["docker-compose", "down"], print_stdout=True)
     return p_docker_down.run()
 
-
-def run_test(env):
+def _run_test(env):
     my_env = os.environ.copy()
     my_env.update(env)
 
@@ -45,12 +44,20 @@ def cli(debug):
 
 
 @cli.command()
+@click.argument('name')
+def run_test(name):
+    envs_filtered = list(filter(lambda _env: _env["name"] == name, envs))
+
+    if (len(envs_filtered)):
+        return _run_test(envs_filtered[0]["vars"])
+
+    click.echo("No environment found with the given name {}".format(name))
+
+
+@cli.command()
 @click.option('--n-parallel', default=2)
 @click.option('--groups', default="")
 def run_tests(n_parallel: int, groups: str):
-    # Start test environment
-    #env_up()
-
     groups=set(groups.split(","))
     envs = list(filter(lambda env: set(env["groups"]).intersection(groups), data["envs"]))
 
@@ -64,7 +71,7 @@ def run_tests(n_parallel: int, groups: str):
             index_start = round * n_parallel
             envs_round = envs[index_start:index_start+n_parallel]
             for i, env in enumerate(envs_round):
-                t = threading.Thread(target=run_test, kwargs={"env": envs[i]["vars"]})
+                t = threading.Thread(target=_run_test, kwargs={"env": envs[i]["vars"]})
                 qtaf_threads.append(t)
                 t.start()
 
@@ -72,9 +79,6 @@ def run_tests(n_parallel: int, groups: str):
                 qtaf_threads[i].join()
     except Exception as e:
         print("Error: Unable to start thread", e)
-
-    # Shut down test environment
-    #env_down()
 
 
 @cli.command()

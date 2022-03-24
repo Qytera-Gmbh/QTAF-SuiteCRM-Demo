@@ -9,7 +9,13 @@
     "name": "chrome",
     "remoteUrl": "http://localhost:4444/wd/hub",
     "implicitWaitTimeout": 30,
-    "quitAfterTesting": true
+    "quitAfterTesting": true,
+    "screenshots": {
+      "beforeScenario": true,
+      "afterScenario": true,
+      "beforeStep": true,
+      "afterStep": true
+    }
   },
   "logging":{
     "enabled":true
