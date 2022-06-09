@@ -6,10 +6,17 @@ from qytera_process import Process
 # ! INFO !
 # You have to run "mvn clean install" before executing the python script. The target directory has to be available
 
-data = {}
-with open('qtaf.json', 'r') as f:
-  data = json.load(f)
 
+class ConfigurationLoader:
+    def load_configuration(self) -> dict:
+        data = {}
+        with open('qtaf.json', 'r') as f:
+            data = json.load(f)
+        return data
+
+configuration_loader = ConfigurationLoader()
+
+data = configuration_loader.load_configuration()
 envs = data["envs"]
 
 def run_docker_up():
@@ -20,7 +27,7 @@ def run_docker_down():
     p_docker_down = Process(["docker-compose", "down"], print_stdout=True)
     return p_docker_down.run()
 
-def _run_test(env):
+def _run_test(env, name=""):
     my_env = os.environ.copy()
     my_env.update(env)
 
@@ -32,7 +39,8 @@ def _run_test(env):
         ],
         print_stdout=True,
         shell=True,
-        env=my_env
+        env=my_env,
+        name=name,
     )
 
     return p.run()
@@ -49,7 +57,7 @@ def run_test(name):
     envs_filtered = list(filter(lambda _env: _env["name"] == name, envs))
 
     if (len(envs_filtered)):
-        return _run_test(envs_filtered[0]["vars"])
+        return _run_test(envs_filtered[0]["vars"], name=name)
 
     click.echo("No environment found with the given name {}".format(name))
 
@@ -71,7 +79,13 @@ def run_tests(n_parallel: int, groups: str):
             index_start = round * n_parallel
             envs_round = envs[index_start:index_start+n_parallel]
             for i, env in enumerate(envs_round):
-                t = threading.Thread(target=_run_test, kwargs={"env": envs[i]["vars"]})
+                t = threading.Thread(
+                target=_run_test,
+                kwargs={
+                    "env": envs[index_start+i]["vars"],
+                    "name": envs[index_start+i]["name"]
+                   }
+                )
                 qtaf_threads.append(t)
                 t.start()
 
@@ -90,7 +104,7 @@ def task(name: str):
     cmds = data["tasks"][name]
     for cmd in cmds:
         arr = cmd.split(" ")
-        p = Process(arr, print_stdout=True)
+        p = Process(arr, print_stdout=True, name=name)
         p.run()
 
 
