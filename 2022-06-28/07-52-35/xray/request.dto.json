@@ -14,17 +14,11 @@
         },
         {
           "status": "PASSED",
-          "comment": "bla",
+          "comment": "Go to Solutions Page",
           "evidences": [],
           "defects": []
         }
       ]
     }
-  ],
-  "info": {
-    "testEnvironments": [
-      "Linux",
-      "chrome-remote"
-    ]
-  }
+  ]
 }
