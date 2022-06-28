@@ -26,8 +26,8 @@ public class QyteraPO extends SuiteCRMTestContext {
     }
 
     @Step(
-            name ="bla",
-            description = "blabla"
+            name ="Go to Solutions Page",
+            description = "Go to Solutions Page"
     )
     public void goToSolutions(){
         driver.findElement(solutions).isDisplayed();
