@@ -12,7 +12,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf:2022-03-24-SNAPSHOT-08" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf:2022-06-28-SNAPSHOT-03" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-java:4.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-api:4.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-chrome-driver:4.1.1" level="project" />
@@ -108,7 +108,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework:spring-expression:5.3.10" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.aspectj:aspectjweaver:1.9.7" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.17.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.17.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.9.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.inject:guice:5.1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
@@ -164,14 +163,15 @@
     <orderEntry type="library" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: net.lingala.zip4j:zip4j:2.9.1" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-model:2.17.2" level="project" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-io:2022-03-24-SNAPSHOT-08" level="project" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-html-report-plugin:2022-03-24-SNAPSHOT-08" level="project" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-xray-plugin:2022-03-24-SNAPSHOT-08" level="project" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-http:2022-03-24-SNAPSHOT-08" level="project" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-allure-plugin:2022-03-24-SNAPSHOT-08" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-io:2022-06-28-SNAPSHOT-03" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-html-report-plugin:2022-06-28-SNAPSHOT-03" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-xray-plugin:2022-06-28-SNAPSHOT-03" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-http:2022-06-28-SNAPSHOT-03" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-allure-plugin:2022-06-28-SNAPSHOT-03" level="project" />
     <orderEntry type="library" name="Maven: com.github.javafaker:javafaker:1.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:android:1.23" level="project" />
     <orderEntry type="library" name="Maven: com.github.mifmif:generex:1.0.2" level="project" />
     <orderEntry type="library" name="Maven: dk.brics.automaton:automaton:1.11-8" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.17.2" level="project" />
   </component>
 </module>
