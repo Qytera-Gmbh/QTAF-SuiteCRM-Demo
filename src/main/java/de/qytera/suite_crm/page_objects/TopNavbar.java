@@ -2,6 +2,7 @@ package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
 import de.qytera.suite_crm.SuiteCRMTestContext;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -24,12 +25,14 @@ public class TopNavbar extends SuiteCRMTestContext {
     String moduleLinksSelector = "#modulelinks ul.dropdown-menu li.mobile-current-actions ul.mobileCurrentTab li";
 
     @Step(name = "Click sales menu", description = "Click sales menu")
+    @When("Ich klicke im Menü auf Sales")
     public void clickSalesMenu() {
         WebElement menu = driver.findElement(By.cssSelector(salesMenuSelector));
         menu.click();
     }
 
     @Step(name = "Open mobile menu", description = "Open mobile menu")
+    @When("Ich öffne das Menü")
     public void openMobileMenu() {
         WebElement we = driver.findElement(By.cssSelector(hamburgerMenuSelector));
         we.click();
@@ -62,6 +65,7 @@ public class TopNavbar extends SuiteCRMTestContext {
     }
 
     @Step(name = "Click contact menu item", description = "Click contact menu item")
+    @When("Ich navigiere zurück zur Startseite")
     public void clickHomeMenuFromNotHomePage() {
         WebElement we = this.getMenuItems().get(1);
         we.click();
@@ -74,6 +78,7 @@ public class TopNavbar extends SuiteCRMTestContext {
     }
 
     @Step(name = "Click tasks menu item", description = "Click tasks menu item")
+    @When("Ich klicke im Menü auf Tasks")
     public void clickMobileTasksMenu() {
         WebElement we = this.getMenuItems().get(13);
         we.click();

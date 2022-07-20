@@ -1,7 +1,5 @@
 {
-  "page": {
-    "url": "http://localhost:80"
-  },
+  "pageUrl": "http://localhost:80",
   "tests":{
     "suite":{
       "name":""

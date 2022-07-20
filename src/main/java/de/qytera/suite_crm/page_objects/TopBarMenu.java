@@ -2,6 +2,7 @@ package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
 import de.qytera.suite_crm.SuiteCRMTestContext;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 
 
@@ -19,6 +20,7 @@ public class TopBarMenu extends SuiteCRMTestContext {
     }
 
     @Step(name = "Click create contact menu item", description = "Click create contact menu item")
+    @When("Ich klicke in der Topbar auf 'Erstelle Link'")
     public void clickCreateLink() {
         WebElement we = topNavbar.getModuleLinks().get(0);
         we.click();
