@@ -18,6 +18,8 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.1.8
+      - name: Create AWS credentials files
+        run: sh ./scripts/aws/create_files.sh
       - name: Initialize terraform
         run: sh ./scripts/terraform/init.sh
       - name: Create AWS infrastructure
