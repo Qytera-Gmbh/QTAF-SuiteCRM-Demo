@@ -92,8 +92,9 @@
 
     <repositories>
         <repository>
-            <id>gitlab-maven</id>
-            <url>https://gitlab.com/api/v4/projects/22533820/packages/maven</url>
+            <id>github</id>
+            <name>GitHub Qytera Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/Qytera-Gmbh/QTAF</url>
         </repository>
     </repositories>
 
