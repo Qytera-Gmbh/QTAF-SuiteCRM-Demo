@@ -12,7 +12,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf:2022-06-28-SNAPSHOT-03" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera:qtaf-core:0.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-java:4.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-api:4.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-chrome-driver:4.1.1" level="project" />
@@ -69,25 +69,26 @@
     <orderEntry type="library" name="Maven: net.jodah:failsafe:2.4.4" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-safari-driver:4.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-support:4.1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.testng:testng:7.5" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.1" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.32" level="project" />
-    <orderEntry type="library" name="Maven: com.beust:jcommander:1.78" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.webjars:jquery:3.5.1" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:cucumber-java:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:cucumber-core:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:cucumber-gherkin:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:cucumber-gherkin-messages:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:messages:17.1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.testng:testng:7.6.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
+    <orderEntry type="library" name="Maven: com.beust:jcommander:1.82" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.webjars:jquery:3.6.0" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:cucumber-java:7.4.1" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:cucumber-core:7.4.1" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:cucumber-gherkin:7.4.1" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:cucumber-gherkin-messages:7.4.1" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:gherkin:23.0.1" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:messages:18.0.0" level="project" />
     <orderEntry type="library" name="Maven: io.cucumber:tag-expressions:4.1.0" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:cucumber-expressions:15.0.1" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:datatable:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:cucumber-plugin:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:docstring:7.2.3" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:html-formatter:17.0.0" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:ci-environment:8.1.0" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:cucumber-expressions:16.0.0" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:datatable:7.4.1" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:cucumber-plugin:7.4.1" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:docstring:7.4.1" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:html-formatter:19.2.0" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:ci-environment:9.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.apiguardian:apiguardian-api:1.1.2" level="project" />
-    <orderEntry type="library" name="Maven: io.cucumber:cucumber-testng:7.2.3" level="project" />
+    <orderEntry type="library" name="Maven: io.cucumber:cucumber-testng:7.4.1" level="project" />
     <orderEntry type="library" name="Maven: io.appium:java-client:7.6.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.httpcomponents:httpclient:4.5.13" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.httpcomponents:httpcore:4.4.13" level="project" />
@@ -159,15 +160,15 @@
     <orderEntry type="library" name="Maven: org.apache.httpcomponents.core5:httpcore5:5.0.2" level="project" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna:5.8.0" level="project" />
     <orderEntry type="library" name="Maven: org.brotli:dec:0.1.2" level="project" />
-    <orderEntry type="library" name="Maven: io.pebbletemplates:pebble:3.1.5" level="project" />
+    <orderEntry type="library" name="Maven: io.pebbletemplates:pebble:3.1.6" level="project" />
     <orderEntry type="library" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: net.lingala.zip4j:zip4j:2.9.1" level="project" />
-    <orderEntry type="library" name="Maven: io.qameta.allure:allure-model:2.17.2" level="project" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-io:2022-06-28-SNAPSHOT-03" level="project" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-html-report-plugin:2022-06-28-SNAPSHOT-03" level="project" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-xray-plugin:2022-06-28-SNAPSHOT-03" level="project" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-http:2022-06-28-SNAPSHOT-03" level="project" />
-    <orderEntry type="library" name="Maven: de.qytera.qtaf:qtaf-allure-plugin:2022-06-28-SNAPSHOT-03" level="project" />
+    <orderEntry type="library" name="Maven: net.lingala.zip4j:zip4j:2.10.0" level="project" />
+    <orderEntry type="library" name="Maven: io.qameta.allure:allure-model:2.18.1" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera:qtaf-io:0.0.1" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera:qtaf-html-report-plugin:0.0.1" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera:qtaf-xray-plugin:0.0.1" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera:qtaf-http:0.0.1" level="project" />
+    <orderEntry type="library" name="Maven: de.qytera:qtaf-allure-plugin:0.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.javafaker:javafaker:1.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:android:1.23" level="project" />
     <orderEntry type="library" name="Maven: com.github.mifmif:generex:1.0.2" level="project" />

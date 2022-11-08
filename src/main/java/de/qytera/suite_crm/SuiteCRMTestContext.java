@@ -9,12 +9,14 @@ import javax.inject.Inject;
 @PageObject
 public class SuiteCRMTestContext extends QtafTestNGContext {
 
-    protected Navigator navigator = new Navigator();
+    @Inject
+    protected Navigator navigator;
 
     @Inject
     protected LoginFormPO loginForm;
 
-    protected TopNavbar topNavbar = new TopNavbar();
+    @Inject
+    protected TopNavbar topNavbar;
 
     @Inject
     protected TopBarMenu topBarMenu;
