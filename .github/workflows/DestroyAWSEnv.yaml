@@ -24,4 +24,4 @@ jobs:
       - name: Initialize terraform
         run: sh ./scripts/terraform/init.sh
       - name: Destroy AWS infrastructure
-        run: sh ./scripts/terraform/destroy.sh
+        run: TF_VAR_instance=t3a.medium sh ./scripts/terraform/destroy.sh
