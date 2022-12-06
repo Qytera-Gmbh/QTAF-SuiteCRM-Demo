@@ -30,6 +30,7 @@ services:
       - 'suitecrm_data:/bitnami/suitecrm'
     depends_on:
       - mariadb
+    restart: always
 
 volumes:
   mariadb_data:
