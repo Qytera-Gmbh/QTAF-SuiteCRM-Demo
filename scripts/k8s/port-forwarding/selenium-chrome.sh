@@ -1,1 +1,0 @@
-kubectl port-forward deployment/selenium-chrome 4444:4444

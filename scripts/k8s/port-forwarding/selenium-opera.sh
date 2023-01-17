@@ -1,1 +1,0 @@
-kubectl port-forward deployment/selenium-opera 4446:4444

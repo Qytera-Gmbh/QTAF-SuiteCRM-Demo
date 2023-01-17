@@ -5,28 +5,14 @@ Dieses Projekt ist ein Demoprojekt für die Automatisierung eines CRM-Systems mi
 ## Voraussetzungen
 
 Auf Ihrem PC muss installiert sein:
+- Java 17+
+- Maven
 - Docker
 - Docker Compose
-- Kubernetes
-- Maven
 
 ## Projekt aufsetzen
 
-Klonen Sie sich dieses Git-Repository mittels `git clone https://bitbucket.org/qytera/qtaf-suitecrm-tests` auf Ihren PC und führen Sie anschließend in dem Verzeichnis, in das Sie dieses Projekt geklont haben den Befehl `docker-compose up -d` aus. Es kann einige Minuten dauern, bis das Projekt eingerichtet worden ist. Anschließend können Sie in Ihrem Browser die Adresse `http://localhost:8080` öffnen. Der Standardusername lautet `user` und das Standardpasswort `bitnami`.
-
-## Selenium Docker-Container mittels docker-compose starten
-
-Im Stammverzeichnis des Projekts finden Sie die Datei `docker-compose.yml`, in welcher die Container für die Selenium-Treiber definiert sind. Insgesamt werden vier Treiber für die Browser Chrome, Firefox, Opera und Edge bereitgestellt. Starten Sie die Container, indem Sie in das Stammverzeichnis des Projektes navigieren und anschließend den Befehl `docker-compose up -d` eingeben. Beim erstmaligen Starten der Container müssen die benötigten Images für die Selenium-Container zunächst heruntergeladen werden, was etwas Zeit in Anspruch nehmen kann.
-
-Nachdem die Container gestartet worden sind stehen folgende Treiber unter folgenden Ports bereit:
-
-| Selenium-Treiber | Hostname         | Port |
-|------------------|------------------|------|
-| Chrome           | selenium-chrome  | 4444 |
-| Firefox          | selenium-firefox | 4445 |
-| Opera            | selenium-opera   | 4446 |
-| Edge             | selenium-edge    | 4447 |
-
+Klonen Sie sich dieses Git-Repository mittels `git clone https://github.com/Qytera-Gmbh/QTAF-SuiteCRM-Demo` auf Ihren PC und führen Sie anschließend in dem Verzeichnis, in das Sie dieses Projekt geklont haben den Befehl `docker-compose up -d` aus. 
 Weiterhin wird ein Container für das SuiteCRM-Projekt erstellt sowie ein weiterer Container für die von SuiteCRM benötigte Datenbank.
 
 | Container | Hostname | Port |
@@ -35,6 +21,21 @@ Weiterhin wird ein Container für das SuiteCRM-Projekt erstellt sowie ein weiter
 | MariaDB   | mariadb  | -    |
 
 Öffnen Sie nun im Browser einen neuen Tab und geben Sie folgende URL ein: `http://localhost:8080`. Sie sollten jetzt die Oberfläche von SuiteCRM sehen.
+Es kann einige Minuten dauern, bis das Projekt eingerichtet worden ist. Der Username lautet `user` und das Passwort `bitnami`.
+
+## Selenium Docker-Container starten
+
+Möchten Sie Selenium nicht selbst aufsetzen, so können Sie dies folgendermaßen mittels Docker tun:
+Im Stammverzeichnis des Projekts finden Sie die Datei `docker-compose.selenium.yml`, in welcher die Container für die Selenium-Treiber definiert sind. Insgesamt werden zwei Treiber für die Browser Chrome und Firefox bereitgestellt. Starten Sie die Container, indem Sie in das Stammverzeichnis des Projektes navigieren und anschließend den Befehl `docker-compose up -d` eingeben. Beim erstmaligen Starten der Container müssen die benötigten Images für die Selenium-Container zunächst heruntergeladen werden, was etwas Zeit in Anspruch nehmen kann.
+
+Nachdem die Container gestartet worden sind stehen folgende Treiber unter folgenden Ports bereit:
+
+| Selenium-Treiber | Hostname         | Port |
+|------------------|------------------|------|
+| Chrome           | selenium-chrome  | 4444 |
+| Firefox          | selenium-firefox | 4445 |
+
+
 
 Nun können Sie die Testfälle starten. Führen Sie hierfür folgenden Befehl aus, um die Testfälle im Selenium-Chrome-Container zu starten:
 ```bash
@@ -44,7 +45,7 @@ $ mvn exec:java -Dexec.mainClass="de.qytera.suite_crm.TestRunner" \
     -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
 ```
 
-Beachten Sie heirbei, dass wir für die URL den Hostnamen `suitecrm` statt `localhost` verwenden. Dies liegt daran, dass die Testfälle im Selenium-Container ausgeführt werden und in diesem `localhost` auf den Container selbst verweist. Somit geben wir als Hostnamen `suitecrm` an, was dem in der Datei `docker-compsose.yml` definierten Containernamen entspricht.
+Beachten Sie hierbei, dass wir für die URL den Hostnamen `suitecrm` statt `localhost` verwenden. Dies liegt daran, dass die Testfälle im Selenium-Container ausgeführt werden und in diesem `localhost` auf den Container selbst verweist. Somit geben wir als Hostnamen `suitecrm` an, was dem in der Datei `docker-compsose.selenium.yml` definierten Containernamen entspricht.
 Für den Hostnamen des Treibers können wir weiterhin `localhost`verwenden, da der Maven-Prozess nicht innerhalb eines Docker-Containers läuft.
 
 Möchten Sie mit Firefox anstelle von Chrome testen ändern Sie die Parameter `driver.name` und `driver.remoteUrl` folgendermaßen:
@@ -74,7 +75,7 @@ $ docker-compose down
 $ kubectl apply -f k8s
 ```
 
-Dieser Befeh erstellt die Container, welche in den YAML-Dateien im Ordner `k8s` definiert sind.
+Dieser Befehl erstellt die Container, welche in den YAML-Dateien im Ordner `k8s` definiert sind.
 
 ### Verwendung unter Windows
 
