@@ -1,34 +1,34 @@
-# SuiteCRM Demo Projekt
+# SuiteCRM Demo Project
 
-Dieses Projekt ist ein Demoprojekt für die Automatisierung eines CRM-Systems mittels Selenium / QTAF.
+This project is a demo project for the automation of a CRM system using Selenium / QTAF.
 
 ## Voraussetzungen
 
-Auf Ihrem PC muss installiert sein:
+The following tools must be installed on your PC:
 - Java 17+
 - Maven
 - Docker
 - Docker Compose
 
-## Projekt aufsetzen
+## Set up project
 
-Klonen Sie sich dieses Git-Repository mittels `git clone https://github.com/Qytera-Gmbh/QTAF-SuiteCRM-Demo` auf Ihren PC und führen Sie anschließend in dem Verzeichnis, in das Sie dieses Projekt geklont haben den Befehl `docker-compose up -d` aus. 
-Weiterhin wird ein Container für das SuiteCRM-Projekt erstellt sowie ein weiterer Container für die von SuiteCRM benötigte Datenbank.
+Clone this Git repository to your PC using `git clone https://github.com/Qytera-Gmbh/QTAF-SuiteCRM-Demo` and then execute the command `docker-compose up -d` in the directory to which you have cloned this project.
+Furthermore, a container for the SuiteCRM project is created as well as another container for the database required by SuiteCRM.
 
 | Container | Hostname | Port |
 |-----------|----------|------|
 | SuiteCRM  | suitecrm | 8080 |
 | MariaDB   | mariadb  | -    |
 
-Öffnen Sie nun im Browser einen neuen Tab und geben Sie folgende URL ein: `http://localhost:8080`. Sie sollten jetzt die Oberfläche von SuiteCRM sehen.
-Es kann einige Minuten dauern, bis das Projekt eingerichtet worden ist. Der Username lautet `user` und das Passwort `bitnami`.
+Now open a new tab in the browser and enter the following URL: `http://localhost:80`. You should now see the SuiteCRM interface.
+It may take a few minutes for the project to be set up. The username is `user` and the password is `bitnami`.
 
-## Selenium Docker-Container starten
+## Use selenium docker containers
 
-Möchten Sie Selenium nicht selbst aufsetzen, so können Sie dies folgendermaßen mittels Docker tun:
-Im Stammverzeichnis des Projekts finden Sie die Datei `docker-compose.selenium.yml`, in welcher die Container für die Selenium-Treiber definiert sind. Insgesamt werden zwei Treiber für die Browser Chrome und Firefox bereitgestellt. Starten Sie die Container, indem Sie in das Stammverzeichnis des Projektes navigieren und anschließend den Befehl `docker-compose up -d` eingeben. Beim erstmaligen Starten der Container müssen die benötigten Images für die Selenium-Container zunächst heruntergeladen werden, was etwas Zeit in Anspruch nehmen kann.
+If you do not want to set up Selenium yourself, you can do so using Docker as follows:
+In the root directory of the project you will find the file `docker-compose.selenium.yml`, in which the containers for the Selenium drivers are defined. A total of two drivers are provided for the Chrome and Firefox browsers. Start the containers by navigating to the root directory of the project and then entering the command `docker-compose up -d`. When starting the containers for the first time, the required images for the Selenium containers must first be downloaded, which may take some time.
 
-Nachdem die Container gestartet worden sind stehen folgende Treiber unter folgenden Ports bereit:
+After the containers have been started, the following drivers are available under the following ports:
 
 | Selenium-Treiber | Hostname         | Port |
 |------------------|------------------|------|
@@ -37,7 +37,7 @@ Nachdem die Container gestartet worden sind stehen folgende Treiber unter folgen
 
 
 
-Nun können Sie die Testfälle starten. Führen Sie hierfür folgenden Befehl aus, um die Testfälle im Selenium-Chrome-Container zu starten:
+Now you can start the test cases. To do this, execute the following command to start the test cases in the Selenium Chrome container:
 ```bash
 $ mvn exec:java -Dexec.mainClass="de.qytera.suite_crm.TestRunner" \
     -Ddriver.name="chrome-remote" \
@@ -45,11 +45,10 @@ $ mvn exec:java -Dexec.mainClass="de.qytera.suite_crm.TestRunner" \
     -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
 ```
 
-Beachten Sie hierbei, dass wir für die URL den Hostnamen `suitecrm` statt `localhost` verwenden. Dies liegt daran, dass die Testfälle im Selenium-Container ausgeführt werden und in diesem `localhost` auf den Container selbst verweist. Somit geben wir als Hostnamen `suitecrm` an, was dem in der Datei `docker-compsose.selenium.yml` definierten Containernamen entspricht.
-Für den Hostnamen des Treibers können wir weiterhin `localhost`verwenden, da der Maven-Prozess nicht innerhalb eines Docker-Containers läuft.
+Note here that we use the host name `suitecrm` for the URL instead of `localhost`. This is because the test cases are executed in the Selenium container and `localhost` refers to the container itself. Thus, we specify `suitecrm` as the hostname, which corresponds to the container name defined in the file `docker-compsose.selenium.yml`.
+For the hostname of the driver we can still use `localhost`, since the Maven process does not run inside a Docker container.
 
-Möchten Sie mit Firefox anstelle von Chrome testen ändern Sie die Parameter `driver.name` und `driver.remoteUrl` folgendermaßen:
-
+If you want to test with Firefox instead of Chrome, change the parameters `driver.name` and `driver.remoteUrl` as follows:
 ```bash
 $ mvn exec:java -Dexec.mainClass="de.qytera.suite_crm.TestRunner" \
     -Ddriver.name="firefox-remote" \
@@ -57,11 +56,11 @@ $ mvn exec:java -Dexec.mainClass="de.qytera.suite_crm.TestRunner" \
     -Ddriver.remoteUrl="http://localhost:4445/wd/hub"
 ```
 
-Sie finden die entsprechenden Befehle auch im Ordner `./scripts/run` in diesem Projekt.
+You can also find the corresponding commands in the folder `./scripts/run` in this project.
 
-### Container herunterfahren
+### Shut down containers
 
-Sie können die Container mit folgendem Befehl wieder herunterfahren:
+You can shut down the containers again with the following command:
 
 ```bash
 $ docker-compose down
@@ -69,17 +68,17 @@ $ docker-compose down
 
 ## Kubernetes
 
-Öffnen Sie eine Konsole, navigieren Sie zum Stammverzeichnis dieses Projektes un führen Sie anschließend folgenden Befehl aus:
+Open a console, navigate to the root directory of this project and then execute the following command:
 
 ```bash
 $ kubectl apply -f k8s
 ```
 
-Dieser Befehl erstellt die Container, welche in den YAML-Dateien im Ordner `k8s` definiert sind.
+This command creates the containers defined in the YAML files in the folder `k8s`.
 
-### Verwendung unter Windows
+### Use under Windows
 
-Benutzen Sie unter Windows die Kubernetes-Version, welche Sie mittels Docker for Desktop installiert haben, so reicht es nicht aus, die Container nur zu starten. Sie müssen in diesem Fall auch manuell die Portfreigabe durchführen. Um den Datenverkehr von einem Port Ihrer lokalen Maschine an einen Port eines Containers weiterzuleiten geben Sie folgenden Befehl ein:
+If you are using the Kubernetes version on Windows that you installed using Docker for Desktop, it is not sufficient to just start the containers. In this case, you must also manually perform port sharing. To forward traffic from a port on your local machine to a port on a container, enter the following command:
 
 ```
 # Allgemein
@@ -89,19 +88,19 @@ $ kubectl port-forward deployment/<deployment-name> <local-port>:<container-port
 $ kubectl port-forward deployment/selenium-chrome 4444:4444
 ```
 
-Es sollte in etwa folgende Ausgabe erscheinen:
+The output should be something like the following:
 
 ```bash
 Forwarding from 127.0.0.1:4444 -> 4444
 Forwarding from [::1]:4444 -> 4444
 ```
 
-Beachten Sie, dass Sie für jedes Port-Forwarding eine neue Konsole öffnen müssen. Sie können das Port-Forwarding mittels CTRL+C beenden.
+Note that you must open a new console for each port forwarding. You can stop port-forwarding by using CTRL+C.
 
-Sie finden die entsprechenden Befehle im Verzeichnis `scripts/k8s/port-forwarding`
-Mehr Informationen zum Thema Port-Forwarding finden Sie hier: https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/
+You will find the corresponding commands in the directory `scripts/k8s/port-forwarding`.
+More information about port-forwarding can be found here: https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/.
 
-Sobald die Container laufen können Sie von Ihrer lokalen Maschine aus mit folgendem Befehl die Tests starten:
+Once the containers are running, you can start the tests from your local machine with the following command:
 
 ```
 $ mvn exec:java -Dexec.mainClass="de.qytera.suite_crm.TestRunner" \
@@ -110,4 +109,4 @@ $ mvn exec:java -Dexec.mainClass="de.qytera.suite_crm.TestRunner" \
     -Ddriver.remoteUrl="http://localhost:4444/wd/hub"
 ```
 
-Sie sehen, dass dieser Befehl identisch ist mit dem Befehl, welcher unter Verwendung von `docker-compose` genutzt wurde.
+You can see that this command is identical to the command used with `docker-compose`.
