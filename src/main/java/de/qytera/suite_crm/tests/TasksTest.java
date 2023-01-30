@@ -2,7 +2,7 @@ package de.qytera.suite_crm.tests;
 
 import com.github.javafaker.Faker;
 import de.qytera.qtaf.core.config.annotations.TestFeature;
-import de.qytera.suite_crm.SuiteCRMTestContext;
+import de.qytera.suite_crm.TestContext;
 import org.testng.annotations.Test;
 
 import javax.inject.Singleton;
@@ -12,7 +12,7 @@ import javax.inject.Singleton;
         description = "Create tasks form"
 )
 @Singleton
-public class TasksTest extends SuiteCRMTestContext {
+public class TasksTest extends TestContext {
     Faker faker = new Faker();
 
     @Test(testName = "QTAF-572", description = "Tasks Test", dependsOnGroups = {"login"})

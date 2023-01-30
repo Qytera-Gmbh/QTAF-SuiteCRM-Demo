@@ -7,7 +7,7 @@ import foo.PageObject;
 import javax.inject.Inject;
 
 @PageObject
-public class SuiteCRMTestContext extends QtafTestNGContext {
+public class TestContext extends QtafTestNGContext {
 
     @Inject
     protected Navigator navigator;

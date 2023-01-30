@@ -1,7 +1,7 @@
 package de.qytera.suite_crm.tests;
 
 import de.qytera.qtaf.core.config.annotations.TestFeature;
-import de.qytera.suite_crm.SuiteCRMTestContext;
+import de.qytera.suite_crm.TestContext;
 import org.testng.annotations.Test;
 
 import javax.inject.Singleton;
@@ -11,7 +11,7 @@ import javax.inject.Singleton;
         description = "Create meetings form"
 )
 @Singleton
-public class MeetingsTest extends SuiteCRMTestContext {
+public class MeetingsTest extends TestContext {
     @Test(testName = "QTAF-573", description = "Meetings Test", dependsOnGroups = {"login"})
     public void testMeetings(){
         // Navigate to meetings page

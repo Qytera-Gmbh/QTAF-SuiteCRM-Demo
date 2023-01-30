@@ -1,7 +1,7 @@
 package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
-import de.qytera.suite_crm.SuiteCRMTestContext;
+import de.qytera.suite_crm.TestContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -12,7 +12,7 @@ import javax.inject.Singleton;
 
 
 @Singleton
-public class CreateContactForm extends SuiteCRMTestContext {
+public class CreateContactForm extends TestContext {
     Random random = new Random();
 
     String firstNameInputSelector = "#first_name";

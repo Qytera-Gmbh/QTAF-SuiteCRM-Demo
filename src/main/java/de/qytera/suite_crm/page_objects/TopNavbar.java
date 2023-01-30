@@ -1,7 +1,7 @@
 package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
-import de.qytera.suite_crm.SuiteCRMTestContext;
+import de.qytera.suite_crm.TestContext;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,13 +9,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+import java.time.Duration;
 import java.util.List;
 
 import javax.inject.Singleton;
 
 
 @Singleton
-public class TopNavbar extends SuiteCRMTestContext {
+public class TopNavbar extends TestContext {
     String profileButtonSelector = ".suitepicon.suitepicon-action-current-user";
     String profileMenuSelector = "ul[role='menu', aria-labelledby='dropdownMenu2']";
     String salesMenuSelector = "a#grouptab_0";
@@ -92,7 +93,7 @@ public class TopNavbar extends SuiteCRMTestContext {
 
     @Step(name = "Click module button", description = "Click module button")
     public void clickModuleButton() {
-        WebDriverWait wait = new WebDriverWait(driver,5);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         WebElement we = wait.until(
                 ExpectedConditions.elementToBeClickable(By.cssSelector(moduleButtonSelector))
         );

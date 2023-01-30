@@ -1,7 +1,7 @@
 package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
-import de.qytera.suite_crm.SuiteCRMTestContext;
+import de.qytera.suite_crm.TestContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -11,7 +11,7 @@ import javax.inject.Singleton;
 
 
 @Singleton
-public class CreateCallPage extends SuiteCRMTestContext {
+public class CreateCallPage extends TestContext {
     String saveButtonSelector = "#SAVE_HEADER";
     String cancelButtonSelector = "#CANCEL";
 

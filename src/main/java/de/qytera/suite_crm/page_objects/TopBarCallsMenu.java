@@ -1,7 +1,7 @@
 package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
-import de.qytera.suite_crm.SuiteCRMTestContext;
+import de.qytera.suite_crm.TestContext;
 import org.openqa.selenium.WebElement;
 
 
@@ -10,7 +10,7 @@ import javax.inject.Singleton;
 
 
 @Singleton
-public class TopBarCallsMenu extends SuiteCRMTestContext {
+public class TopBarCallsMenu extends TestContext {
 
     @Step(name = "Click n-th ite", description = "Click n-th item of menu")
     private void clickNthItem(int n) {

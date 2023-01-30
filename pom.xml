@@ -17,35 +17,28 @@
         <dependency>
             <groupId>de.qytera</groupId>
             <artifactId>qtaf-core</artifactId>
-            <version>SNAPSHOT-LOCAL-03</version>
+            <version>0.0.3</version>
         </dependency>
         <dependency>
             <groupId>de.qytera</groupId>
             <artifactId>qtaf-html-report-plugin</artifactId>
-            <version>SNAPSHOT-LOCAL-03</version>
+            <version>0.0.3</version>
         </dependency>
         <dependency>
             <groupId>de.qytera</groupId>
             <artifactId>qtaf-xray-plugin</artifactId>
-            <version>SNAPSHOT-LOCAL-03</version>
+            <version>0.0.3</version>
         </dependency>
         <dependency>
             <groupId>de.qytera</groupId>
             <artifactId>qtaf-allure-plugin</artifactId>
-            <version>SNAPSHOT-LOCAL-03</version>
+            <version>0.0.3</version>
         </dependency>
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.17.2</version>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -72,19 +65,6 @@
                         </manifest>
                     </archive>
                     <finalName>app</finalName>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>de.qytera.suite_crm.TestRunner</mainClass>
-                        </manifest>
-                    </archive>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
                 </configuration>
             </plugin>
         </plugins>
