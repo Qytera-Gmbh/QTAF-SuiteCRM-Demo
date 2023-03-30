@@ -2,7 +2,9 @@ package de.qytera.suite_crm.tests;
 
 import com.github.javafaker.Faker;
 import de.qytera.qtaf.core.config.annotations.TestFeature;
+import de.qytera.qtaf.xray.annotation.XrayTest;
 import de.qytera.suite_crm.TestContext;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import javax.inject.Singleton;
@@ -15,10 +17,20 @@ import javax.inject.Singleton;
 public class TasksTest extends TestContext {
     Faker faker = new Faker();
 
-    @Test(testName = "QTAF-572", description = "Tasks Test", dependsOnGroups = {"login"})
-    public void testTasks() {
+    @DataProvider(name = "tasksData")
+    public Object[][] tasksData() {
+        return new Object[][] {
+                { faker.name().title(), "John Doe", faker.name().title() },
+                { faker.name().title(), "Jane Doe", faker.name().title() },
+                { faker.name().title(), "William Smith", faker.name().title() },
+        };
+    }
 
+    @Test(testName = "TasksTest", description = "Tasks Test", dependsOnGroups = {"login"}, dataProvider = "tasksData")
+    @XrayTest(key = "QTAF-572")
+    public void testTasks(String subject, String contactName, String description) {
         //Navigate to Tasks Create Page
+        navigator.goToRootPage();
         topNavbar.openMobileMenu();
         topNavbar.clickMobileTasksMenu();
         tasksPage.clickTasksModuleButton();

@@ -1,8 +1,10 @@
 package de.qytera.suite_crm.tests;
 
 import de.qytera.qtaf.core.config.annotations.TestFeature;
+import de.qytera.qtaf.xray.annotation.XrayTest;
 import de.qytera.suite_crm.TestContext;
 import org.openqa.selenium.Dimension;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import javax.inject.Singleton;
@@ -13,12 +15,10 @@ import javax.inject.Singleton;
 )
 @Singleton
 public class LoginTest extends TestContext {
-
-    @Test(testName = "QTAF-496", description = "Login Test", groups = {"login"})
+    @Test(testName = "LoginTest", description = "Login Test", groups = {"login"})
+    @XrayTest(key = "QTAF-496")
     public void testLogin(){
-        driver.manage().window().setSize(new Dimension(1051, 900));
-
-        // Login
+        driverManager.resizeBrowser(1051, 900);
         navigator.goToRootPage();
         loginForm.fillUsernameField("user");
         loginForm.fillPasswordField("bitnami");
