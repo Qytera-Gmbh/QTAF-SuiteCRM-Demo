@@ -25,6 +25,9 @@ jobs:
       - uses: actions/checkout@v2
       - name: Create docker environment
         run: docker compose up -d
+      - name: Sleep for 30 seconds
+        run: sleep 30s
+        shell: bash
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
