@@ -1,6 +1,9 @@
 name: SuiteCRM Tests
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -18,9 +21,10 @@ jobs:
         image: selenium/standalone-chrome
         ports:
           - 4444:4444
-
     steps:
       - uses: actions/checkout@v2
+      - name: Create docker environment
+        run: docker compose up -d
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
