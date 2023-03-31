@@ -26,7 +26,7 @@ public class TasksTest extends TestContext {
         };
     }
 
-    @Test(testName = "TasksTest", description = "Tasks Test", dependsOnGroups = {"login"}, dataProvider = "tasksData")
+    @Test(testName = "TasksTest", description = "Tasks Test", dependsOnGroups = {"login"}, dataProvider = "tasksData", suiteName = "suite2")
     @XrayTest(key = "QTAF-572")
     public void testTasks(String subject, String contactName, String description) {
         //Navigate to Tasks Create Page

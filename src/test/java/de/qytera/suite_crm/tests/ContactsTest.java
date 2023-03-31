@@ -37,7 +37,7 @@ public class ContactsTest extends TestContext {
         return data;
     }
 
-    @Test(testName = "ContactsTest", description = "Contacts Test", dependsOnGroups = {"login"}, dataProvider = "contactsData")
+    @Test(testName = "ContactsTest", description = "Contacts Test", dependsOnGroups = {"login"}, dataProvider = "contactsData", suiteName = "suite2")
     @XrayTest(key = "QTAF-568")
     public void testContacts(
             String firstName,

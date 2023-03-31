@@ -26,20 +26,30 @@ public class CallsTest extends TestContext {
         };
     }
 
-    @Test(testName = "CallsTest", description = "Calls Test", dependsOnGroups = {"login"}, dataProvider = "callsData")
-    @XrayTest(key = "QTAF-567")
-    public void testCalls(String subject, String description) {
+    @BeforeMethod(description = "Navigate to the calls form")
+    @XrayTest(key = "QTAF-993")
+    public void beforeCallsTest() {
         //Navigate to calls page
         navigator.goToRootPage();
         topNavbar.openMobileMenu();
         topNavbar.clickMobileCallsMenu();
         callsPage.clickCallsModuleButton();
         topBarCallsMenu.clickLogCallLink();
+    }
+
+    @Test(testName = "CallsTest", description = "Calls Test", dependsOnGroups = {"login"}, dataProvider = "callsData", suiteName = "suite2")
+    @XrayTest(key = "QTAF-567")
+    public void testCalls(String subject, String description) {
         // Fill call form
         createCallForm.fillSubjectField(subject);
         createCallForm.fillDurationField();
         createCallForm.fillDescriptionField(description);
         createCallPage.clickSaveButton();
+    }
+
+    @AfterMethod(description = "Navigate to the home page")
+    @XrayTest(key = "QTAF-994")
+    public void afterCallsTest() {
         //Navigate to Home page
         topNavbar.openMobileMenu();
         topNavbar.clickHomeMenuFromNotHomePage();

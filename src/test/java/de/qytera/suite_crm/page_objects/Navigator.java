@@ -15,11 +15,9 @@ public class Navigator extends TestContext {
             name = "Go to SuiteCRM main page",
             description = "Navigate to the SuiteCRM main home page"
     )
-    @Wenn("Ich navigiere zur Startseite")
     public void goToRootPage() {
         ConfigMap configMap = QtafFactory.getConfiguration();
         String url = configMap.getString("pageUrl", "http://127.0.0.1:80");
-        System.out.println("Page URL: " + url);
         driver.get(url);
     }
 

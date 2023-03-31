@@ -26,7 +26,7 @@ public class MeetingsTest extends TestContext {
         };
     }
 
-    @Test(testName = "MeetingsTest", description = "Meetings Test", dependsOnGroups = {"login"}, dataProvider = "meetingsData")
+    @Test(testName = "MeetingsTest", description = "Meetings Test", dependsOnGroups = {"login"}, dataProvider = "meetingsData", suiteName = "suite2")
     @XrayTest(key = "QTAF-573")
     public void testMeetings(String subject, String location, String description){
         // Navigate to meetings page

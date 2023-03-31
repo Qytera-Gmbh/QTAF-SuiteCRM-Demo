@@ -7,7 +7,7 @@
     "package":"de.qytera.suite_crm.tests"
   },
   "driver":{
-    "name": "edge",
+    "name": "chrome",
     "remoteUrl": "http://localhost:4444/wd/hub",
     "implicitWaitTimeout": 30,
     "quitAfterTesting": true,
