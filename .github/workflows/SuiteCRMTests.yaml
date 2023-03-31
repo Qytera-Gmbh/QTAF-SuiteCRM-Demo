@@ -45,13 +45,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Create docker environment
-        run: docker compose up -d
       - name: Sleep for 45 seconds
         run: sleep 45s
         shell: bash
       - name: Ping application
         run: curl http://localhost:80
+      - name: Ping application
+        run: wget http://localhost:80
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
