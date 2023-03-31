@@ -30,6 +30,10 @@ jobs:
         shell: bash
       - name: Show docker environment
         run: docker ps
+      - name: Show SuiteCRM logs
+        run: docker logs qtaf-suitecrm-tests-suitecrm-1
+      - name: Show MariaDB logs
+        run: docker logs qtaf-suitecrm-tests-mariadb-1
       - name: Ping application
         run: curl http://localhost:80
       - uses: actions/setup-java@v3
