@@ -3,6 +3,10 @@ package de.qytera.suite_crm.tests;
 import de.qytera.qtaf.core.config.annotations.TestFeature;
 import de.qytera.qtaf.xray.annotation.XrayTest;
 import de.qytera.suite_crm.TestContext;
+import de.qytera.suite_crm.entity.MeetingEntity;
+import de.qytera.suite_crm.page_objects.*;
+import de.qytera.suite_crm.processes.meetings.FillMeetingsFormProcess;
+import de.qytera.suite_crm.provider.MeetingEntityProvider;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -16,19 +20,20 @@ import javax.inject.Singleton;
 public class MeetingsTest extends TestContext {
     @DataProvider(name = "meetingsData")
     public Object[][] getCallsData() {
-        return new Object[][]{
-                {"Daily Montag", "Raum 123", "Daily für alle Mitarbeiter"},
-                {"Daily Dienstag", "Raum 102", "Daily für alle Mitarbeiter"},
-                {"Daily Mittwoch", "Raum 111", "Daily für alle Mitarbeiter"},
-                {"Daily Donnerstag", "Raum 123", "Daily für alle Mitarbeiter"},
-                {"Daily Freitag", "Raum 104", "Daily für alle Mitarbeiter"},
-                {"Weekly Donnerstag", "Raum 100", "Weekly für alle Mitarbeiter"},
-        };
+        return MeetingEntityProvider.getMeetingEntities();
     }
 
     @Test(testName = "MeetingsTest", description = "Meetings Test", dependsOnGroups = {"login"}, dataProvider = "meetingsData", suiteName = "suite2")
     @XrayTest(key = "QTAF-573")
-    public void testMeetings(String subject, String location, String description){
+    public void testMeetings(MeetingEntity meetingEntity){
+        // Instantiate page objects
+        Navigator navigator = load(Navigator.class);
+        TopNavbar topNavbar = load(TopNavbar.class);
+        TopBarMenu topBarMenu = load(TopBarMenu.class);
+        CalendarPage calendarPage = load(CalendarPage.class);
+        FillMeetingsFormProcess fillMeetingsFormProcess = load(FillMeetingsFormProcess.class);
+        fillMeetingsFormProcess.setMeetingEntity(meetingEntity);
+
         // Navigate to meetings page
         navigator.goToRootPage();
         topNavbar.openMobileMenu();
@@ -36,11 +41,7 @@ public class MeetingsTest extends TestContext {
         calendarPage.clickMeetingsModuleButton();
         topBarMenu.clickNthItem(1);
 
-        // Fill meetings form
-        createMeetingForm.fillSubjectField("Neues Meeting");
-        createMeetingForm.fillLocationField("Raum 123");
-        createMeetingForm.fillDescriptionField("Neues Meeting Beschreibung");
-        createMeetingPage.clickSaveButton();
+        fillMeetingsFormProcess.execute();
 
         //Navigate to Home page
         topNavbar.openMobileMenu();

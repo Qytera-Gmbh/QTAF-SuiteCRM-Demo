@@ -17,7 +17,7 @@ public class Navigator extends TestContext {
     )
     public void goToRootPage() {
         ConfigMap configMap = QtafFactory.getConfiguration();
-        String url = configMap.getString("pageUrl", "http://127.0.0.1:80");
+        String url = configMap.getString("page.url", "http://127.0.0.1:80");
         driver.get(url);
     }
 

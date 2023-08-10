@@ -4,6 +4,13 @@ import com.github.javafaker.Faker;
 import de.qytera.qtaf.core.config.annotations.TestFeature;
 import de.qytera.qtaf.xray.annotation.XrayTest;
 import de.qytera.suite_crm.TestContext;
+import de.qytera.suite_crm.entity.TaskEntity;
+import de.qytera.suite_crm.page_objects.Navigator;
+import de.qytera.suite_crm.page_objects.TasksPage;
+import de.qytera.suite_crm.page_objects.TopBarMenu;
+import de.qytera.suite_crm.page_objects.TopNavbar;
+import de.qytera.suite_crm.processes.tasks.FillTaskFormProcess;
+import de.qytera.suite_crm.provider.TaskEntityProvider;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -15,20 +22,22 @@ import javax.inject.Singleton;
 )
 @Singleton
 public class TasksTest extends TestContext {
-    Faker faker = new Faker();
-
     @DataProvider(name = "tasksData")
     public Object[][] tasksData() {
-        return new Object[][] {
-                { faker.name().title(), "John Doe", faker.name().title() },
-                { faker.name().title(), "Jane Doe", faker.name().title() },
-                { faker.name().title(), "William Smith", faker.name().title() },
-        };
+        return TaskEntityProvider.getTaskEntities();
     }
 
     @Test(testName = "TasksTest", description = "Tasks Test", dependsOnGroups = {"login"}, dataProvider = "tasksData", suiteName = "suite2")
     @XrayTest(key = "QTAF-572")
-    public void testTasks(String subject, String contactName, String description) {
+    public void testTasks(TaskEntity taskEntity) {
+        // Instantiate page objects
+        Navigator navigator = load(Navigator.class);
+        TopNavbar topNavbar = load(TopNavbar.class);
+        TopBarMenu topBarMenu = load(TopBarMenu.class);
+        TasksPage tasksPage = load(TasksPage.class);
+        FillTaskFormProcess fillTaskFormProcess = load(FillTaskFormProcess.class);
+        fillTaskFormProcess.setTaskEntity(taskEntity);
+
         //Navigate to Tasks Create Page
         navigator.goToRootPage();
         topNavbar.openMobileMenu();
@@ -36,11 +45,8 @@ public class TasksTest extends TestContext {
         tasksPage.clickTasksModuleButton();
         topBarMenu.clickCreateLink();
 
-        //Create a Tasks Page
-        tasksPage.fillSubjectName(faker.name().title());
-        tasksPage.fillContactName(faker.name().fullName());
-        tasksPage.fillDescription(faker.name().title());
-        tasksPage.clickSaveButton();
+        //Create a Task
+        fillTaskFormProcess.execute();
 
         //Navigate to Home Page
         topNavbar.openMobileMenu();

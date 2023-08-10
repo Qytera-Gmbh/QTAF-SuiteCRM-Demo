@@ -14,6 +14,7 @@ public class TopBarCallsMenu extends TestContext {
 
     @Step(name = "Click n-th ite", description = "Click n-th item of menu")
     private void clickNthItem(int n) {
+        TopNavbar topNavbar = load(TopNavbar.class);
         WebElement we = topNavbar.getModuleLinks().get(n -1);
         we.click();
     }
