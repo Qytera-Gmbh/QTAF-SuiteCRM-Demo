@@ -33,9 +33,8 @@ def _run_test(env, name=""):
 
     p = Process([
         "mvn",
-        "exec:java",
-        "-Dexec.mainClass=de.qytera.suite_crm.TestRunner",
-        "-DpageUrl=http://localhost:80",
+        "clean",
+        "test",
         ],
         print_stdout=True,
         shell=True,

@@ -3,6 +3,7 @@ package de.qytera.suite_crm.page_objects;
 import de.qytera.qtaf.core.guice.annotations.Step;
 import de.qytera.suite_crm.TestContext;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 
 

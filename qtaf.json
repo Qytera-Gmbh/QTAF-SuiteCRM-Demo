@@ -28,11 +28,6 @@
       "groups": ["local"]
     },
     {
-      "name": "opera-local",
-      "vars": {"DRIVER_NAME": "opera"},
-      "groups": ["local"]
-    },
-    {
       "name": "edge-local",
       "vars": {"DRIVER_NAME": "edge"},
       "groups": ["local"]
@@ -50,11 +45,6 @@
     {
       "name": "edge-remote",
       "vars": {"DRIVER_NAME": "edge-remote"},
-      "groups": ["remote"]
-    },
-    {
-      "name": "opera-remote",
-      "vars": {"DRIVER_NAME": "opera-remote"},
       "groups": ["remote"]
     }
   ]

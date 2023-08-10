@@ -26,9 +26,3 @@ services:
       - "5903:5900"
       - '7903:7900'
     restart: always
-
-volumes:
-  mariadb_data:
-    driver: local
-  suitecrm_data:
-    driver: local
