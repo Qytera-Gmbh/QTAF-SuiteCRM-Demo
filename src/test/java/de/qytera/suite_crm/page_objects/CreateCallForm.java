@@ -6,11 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-
-import javax.inject.Singleton;
-
-
-@Singleton
 public class CreateCallForm extends TestContext {
 
     private String name = "name";

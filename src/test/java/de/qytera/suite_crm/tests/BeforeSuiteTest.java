@@ -6,13 +6,11 @@ import de.qytera.suite_crm.TestContext;
 import de.qytera.suite_crm.page_objects.DriverManager;
 import org.testng.annotations.BeforeSuite;
 
-import javax.inject.Singleton;
 
 @TestFeature(
         name = "Suite Preconditions",
         description = "Prepare test environment"
 )
-@Singleton
 public class BeforeSuiteTest extends TestContext {
     @BeforeSuite(groups = {"login"})
     @XrayTest(key = "QTAF-989")

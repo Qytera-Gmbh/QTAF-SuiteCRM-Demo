@@ -5,10 +5,7 @@ import de.qytera.suite_crm.TestContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import javax.inject.Singleton;
 
-
-@Singleton
 public class CallsPage extends TestContext {
     String moduleButtonSelector = "#moduleTab_Calls";
 

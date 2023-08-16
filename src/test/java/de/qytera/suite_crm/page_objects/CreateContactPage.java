@@ -6,11 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-
-import javax.inject.Singleton;
-
-
-@Singleton
 public class CreateContactPage extends TestContext {
     String moduleButtonSelector = "#moduleTab_Contacts";
     String saveButtonSelector = "#SAVE";

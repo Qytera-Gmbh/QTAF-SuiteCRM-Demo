@@ -1,6 +1,5 @@
 package de.qytera.suite_crm.tests;
 
-import com.github.javafaker.Faker;
 import de.qytera.qtaf.core.config.annotations.TestFeature;
 import de.qytera.qtaf.xray.annotation.XrayTest;
 import de.qytera.suite_crm.TestContext;
@@ -11,15 +10,10 @@ import de.qytera.suite_crm.provider.ContactEntityProvider;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import javax.inject.Singleton;
-import java.util.ArrayList;
-import java.util.List;
-
 @TestFeature(
         name = "Contacts form",
         description = "Create contact form"
 )
-@Singleton
 public class ContactsTest extends TestContext {
     @DataProvider(name = "contactsData")
     public Object[][] contactsData() {

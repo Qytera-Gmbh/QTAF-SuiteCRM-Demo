@@ -7,15 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-
 import java.time.Duration;
 import java.util.List;
 
-import javax.inject.Singleton;
 
-
-@Singleton
 public class TopNavbar extends TestContext {
     String profileButtonSelector = ".suitepicon.suitepicon-action-current-user";
     String profileMenuSelector = "ul[role='menu', aria-labelledby='dropdownMenu2']";

@@ -4,12 +4,8 @@ import de.qytera.qtaf.core.QtafFactory;
 import de.qytera.qtaf.core.config.entity.ConfigMap;
 import de.qytera.qtaf.core.guice.annotations.Step;
 import de.qytera.suite_crm.TestContext;
-import io.cucumber.java.de.Wenn;
-
-import javax.inject.Singleton;
 
 
-@Singleton
 public class Navigator extends TestContext {
     @Step(
             name = "Go to SuiteCRM main page",

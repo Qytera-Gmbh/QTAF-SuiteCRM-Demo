@@ -1,6 +1,5 @@
 package de.qytera.suite_crm.tests;
 
-import com.github.javafaker.Faker;
 import de.qytera.qtaf.core.config.annotations.TestFeature;
 import de.qytera.qtaf.xray.annotation.XrayTest;
 import de.qytera.suite_crm.TestContext;
@@ -14,13 +13,11 @@ import de.qytera.suite_crm.provider.TaskEntityProvider;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import javax.inject.Singleton;
 
 @TestFeature(
         name = "Tasks from ",
         description = "Create tasks form"
 )
-@Singleton
 public class TasksTest extends TestContext {
     @DataProvider(name = "tasksData")
     public Object[][] tasksData() {

@@ -4,14 +4,8 @@ import de.qytera.qtaf.core.guice.annotations.Step;
 import de.qytera.suite_crm.TestContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
-
 import java.util.Random;
 
-import javax.inject.Singleton;
-
-
-@Singleton
 public class CreateContactForm extends TestContext {
     Random random = new Random();
 

@@ -10,13 +10,11 @@ import de.qytera.suite_crm.processes.calls.FillCallFormProcess;
 import de.qytera.suite_crm.provider.CallEntityProvider;
 import org.testng.annotations.*;
 
-import javax.inject.Singleton;
 
 @TestFeature(
         name = "Calls form",
         description = "Create call form"
 )
-@Singleton
 public class CallsTest extends TestContext {
     @DataProvider(name = "callsData")
     public CallEntity[][] getCallsData() {

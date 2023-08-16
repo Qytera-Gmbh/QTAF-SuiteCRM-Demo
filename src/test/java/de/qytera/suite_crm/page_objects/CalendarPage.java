@@ -6,10 +6,6 @@ import de.qytera.suite_crm.TestContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import javax.inject.Singleton;
-
-
-@Singleton
 public class CalendarPage extends TestContext {
     String moduleButtonSelector = "#moduleTab_Calendar";
 

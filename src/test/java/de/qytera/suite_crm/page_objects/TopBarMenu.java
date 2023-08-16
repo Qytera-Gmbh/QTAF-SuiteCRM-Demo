@@ -5,12 +5,6 @@ import de.qytera.suite_crm.TestContext;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebElement;
 
-
-
-import javax.inject.Singleton;
-
-
-@Singleton
 public class TopBarMenu extends TestContext {
 
     @Step(name = "Click n-th item", description = "Click n-th item of the menu")

@@ -10,13 +10,11 @@ import de.qytera.suite_crm.provider.MeetingEntityProvider;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import javax.inject.Singleton;
 
 @TestFeature(
         name = "Meetings Form",
         description = "Create meetings form"
 )
-@Singleton
 public class MeetingsTest extends TestContext {
     @DataProvider(name = "meetingsData")
     public Object[][] getCallsData() {
@@ -46,6 +44,5 @@ public class MeetingsTest extends TestContext {
         //Navigate to Home page
         topNavbar.openMobileMenu();
         topNavbar.clickHomeMenuFromNotHomePage();
-
     }
 }

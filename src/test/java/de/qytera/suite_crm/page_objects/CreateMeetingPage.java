@@ -7,10 +7,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 
-import javax.inject.Singleton;
-
-
-@Singleton
 public class CreateMeetingPage extends TestContext {
     String saveButtonSelector = "#SAVE_HEADER";
     String cancelButtonSelector = "#CANCEL";
