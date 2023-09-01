@@ -27,7 +27,7 @@ jobs:
       - name: Initialize terraform
         run: sh ./scripts/terraform/init.sh
       - name: Create AWS infrastructure
-        run: TF_VAR_instance=t3a.medium sh ./scripts/terraform/apply.sh
+        run: TF_VAR_instance=t3a.xlarge sh ./scripts/terraform/apply.sh
       - name: Generate deployment package
         run: zip -r deploy.zip . docker-compose.yml
       - name: Deploy to EB
