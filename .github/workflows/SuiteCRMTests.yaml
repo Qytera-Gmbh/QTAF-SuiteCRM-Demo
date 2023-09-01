@@ -44,7 +44,7 @@ jobs:
           ALLOW_EMPTY_PASSWORD: yes
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Sleep for 45 seconds
         run: sleep 45s
         shell: bash
