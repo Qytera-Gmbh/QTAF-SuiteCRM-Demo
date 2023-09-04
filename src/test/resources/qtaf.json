@@ -11,6 +11,7 @@
   "driver":{
     "name": "chrome",
     "remoteUrl": "http://localhost:4444/wd/hub",
+    "headless": false,
     "implicitWaitTimeout": 30,
     "quitAfterTesting": true,
     "screenshots": {
