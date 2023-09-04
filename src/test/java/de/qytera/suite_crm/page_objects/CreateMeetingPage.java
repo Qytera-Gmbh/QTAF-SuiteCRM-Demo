@@ -1,13 +1,13 @@
 package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 
-public class CreateMeetingPage extends TestContext {
+public class CreateMeetingPage extends QtafTestNGContext {
     String saveButtonSelector = "#SAVE_HEADER";
     String cancelButtonSelector = "#CANCEL";
 

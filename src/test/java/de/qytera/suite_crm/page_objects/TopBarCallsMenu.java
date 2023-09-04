@@ -1,11 +1,11 @@
 package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import org.openqa.selenium.WebElement;
 
 
-public class TopBarCallsMenu extends TestContext {
+public class TopBarCallsMenu extends QtafTestNGContext {
 
     @Step(name = "Click n-th ite", description = "Click n-th item of menu")
     private void clickNthItem(int n) {

@@ -1,9 +1,8 @@
 package de.qytera.suite_crm.tests;
 
-import com.github.javafaker.Faker;
 import de.qytera.qtaf.core.config.annotations.TestFeature;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import de.qytera.qtaf.xray.annotation.XrayTest;
-import de.qytera.suite_crm.TestContext;
 import de.qytera.suite_crm.entity.CallEntity;
 import de.qytera.suite_crm.page_objects.*;
 import de.qytera.suite_crm.processes.calls.FillCallFormProcess;
@@ -15,7 +14,7 @@ import org.testng.annotations.*;
         name = "Calls form",
         description = "Create call form"
 )
-public class CallsTest extends TestContext {
+public class CallsTest extends QtafTestNGContext {
     @DataProvider(name = "callsData")
     public CallEntity[][] getCallsData() {
         return CallEntityProvider.getCallEntities();

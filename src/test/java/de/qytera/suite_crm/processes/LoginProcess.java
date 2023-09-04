@@ -1,6 +1,6 @@
 package de.qytera.suite_crm.processes;
 
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import de.qytera.suite_crm.entity.LoginCredentials;
 import de.qytera.suite_crm.page_objects.LoginFormPO;
 import de.qytera.suite_crm.page_objects.Navigator;
@@ -9,7 +9,7 @@ import de.qytera.suite_crm.patterns.Command;
 /**
  * Login process
  */
-public class LoginProcess extends TestContext implements Command {
+public class LoginProcess extends QtafTestNGContext implements Command {
     /**
      * Visit login form and enter credentials. Then click on submit button.
      */

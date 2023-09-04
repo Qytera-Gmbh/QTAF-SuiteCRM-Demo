@@ -1,6 +1,6 @@
 package de.qytera.suite_crm.processes.contacts;
 
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import de.qytera.suite_crm.entity.ContactEntity;
 import de.qytera.suite_crm.page_objects.CreateContactForm;
 import de.qytera.suite_crm.page_objects.CreateContactPage;
@@ -11,7 +11,7 @@ import lombok.Data;
  * Fill the contact form
  */
 @Data
-public class FillContactFormProcess extends TestContext implements Command {
+public class FillContactFormProcess extends QtafTestNGContext implements Command {
     /**
      * The data that will be used to fill the contact form
      */

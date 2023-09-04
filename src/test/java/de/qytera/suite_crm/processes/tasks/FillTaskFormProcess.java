@@ -1,13 +1,13 @@
 package de.qytera.suite_crm.processes.tasks;
 
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import de.qytera.suite_crm.entity.TaskEntity;
 import de.qytera.suite_crm.page_objects.TasksPage;
 import de.qytera.suite_crm.patterns.Command;
 import lombok.Data;
 
 @Data
-public class FillTaskFormProcess extends TestContext implements Command {
+public class FillTaskFormProcess extends QtafTestNGContext implements Command {
     /**
      * Data that will be used to fill the form
      */

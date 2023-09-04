@@ -3,10 +3,10 @@ package de.qytera.suite_crm.page_objects;
 import de.qytera.qtaf.core.QtafFactory;
 import de.qytera.qtaf.core.config.entity.ConfigMap;
 import de.qytera.qtaf.core.guice.annotations.Step;
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 
 
-public class Navigator extends TestContext {
+public class Navigator extends QtafTestNGContext {
     @Step(
             name = "Go to SuiteCRM main page",
             description = "Navigate to the SuiteCRM main home page"

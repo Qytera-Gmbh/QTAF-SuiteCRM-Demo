@@ -1,8 +1,8 @@
 package de.qytera.suite_crm.tests;
 
 import de.qytera.qtaf.core.config.annotations.TestFeature;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import de.qytera.qtaf.xray.annotation.XrayTest;
-import de.qytera.suite_crm.TestContext;
 import de.qytera.suite_crm.entity.TaskEntity;
 import de.qytera.suite_crm.page_objects.Navigator;
 import de.qytera.suite_crm.page_objects.TasksPage;
@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
         name = "Tasks from ",
         description = "Create tasks form"
 )
-public class TasksTest extends TestContext {
+public class TasksTest extends QtafTestNGContext {
     @DataProvider(name = "tasksData")
     public Object[][] tasksData() {
         return TaskEntityProvider.getTaskEntities();

@@ -1,6 +1,6 @@
 package de.qytera.suite_crm.processes.meetings;
 
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import de.qytera.suite_crm.entity.MeetingEntity;
 import de.qytera.suite_crm.page_objects.CreateMeetingForm;
 import de.qytera.suite_crm.page_objects.CreateMeetingPage;
@@ -8,7 +8,7 @@ import de.qytera.suite_crm.patterns.Command;
 import lombok.Data;
 
 @Data
-public class FillMeetingsFormProcess extends TestContext implements Command {
+public class FillMeetingsFormProcess extends QtafTestNGContext implements Command {
     /**
      * Data that will be used to fill meeting entities
      */

@@ -1,7 +1,7 @@
 package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.List;
 
 
-public class TopNavbar extends TestContext {
+public class TopNavbar extends QtafTestNGContext {
     String profileButtonSelector = ".suitepicon.suitepicon-action-current-user";
     String profileMenuSelector = "ul[role='menu', aria-labelledby='dropdownMenu2']";
     String salesMenuSelector = "a#grouptab_0";

@@ -1,12 +1,12 @@
 package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class TasksPage extends TestContext {
+public class TasksPage extends QtafTestNGContext {
     String tasksButtonSelector = "moduleTab_Tasks";
     String saveButtonSelector = "SAVE";
     String subjectSelector = "name";

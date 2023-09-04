@@ -1,8 +1,8 @@
 package de.qytera.suite_crm.tests;
 
 import de.qytera.qtaf.core.config.annotations.TestFeature;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import de.qytera.qtaf.xray.annotation.XrayTest;
-import de.qytera.suite_crm.TestContext;
 import de.qytera.suite_crm.entity.ContactEntity;
 import de.qytera.suite_crm.page_objects.*;
 import de.qytera.suite_crm.processes.contacts.FillContactFormProcess;
@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
         name = "Contacts form",
         description = "Create contact form"
 )
-public class ContactsTest extends TestContext {
+public class ContactsTest extends QtafTestNGContext {
     @DataProvider(name = "contactsData")
     public Object[][] contactsData() {
         return ContactEntityProvider.getContactEntities();

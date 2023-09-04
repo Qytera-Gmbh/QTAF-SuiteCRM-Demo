@@ -1,6 +1,6 @@
 package de.qytera.suite_crm.processes.calls;
 
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import de.qytera.suite_crm.entity.CallEntity;
 import de.qytera.suite_crm.page_objects.CreateCallForm;
 import de.qytera.suite_crm.page_objects.CreateCallPage;
@@ -8,7 +8,7 @@ import de.qytera.suite_crm.patterns.Command;
 import lombok.Data;
 
 @Data
-public class FillCallFormProcess extends TestContext implements Command {
+public class FillCallFormProcess extends QtafTestNGContext implements Command {
     /**
      * The data that will be used to fill the form
      */

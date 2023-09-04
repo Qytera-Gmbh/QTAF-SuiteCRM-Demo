@@ -1,12 +1,12 @@
 package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-public class CreateContactPage extends TestContext {
+public class CreateContactPage extends QtafTestNGContext {
     String moduleButtonSelector = "#moduleTab_Contacts";
     String saveButtonSelector = "#SAVE";
     String cancelButtonSelector = "#CANCEL";

@@ -1,8 +1,8 @@
 package de.qytera.suite_crm.tests;
 
 import de.qytera.qtaf.core.config.annotations.TestFeature;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import de.qytera.qtaf.xray.annotation.XrayTest;
-import de.qytera.suite_crm.TestContext;
 import de.qytera.suite_crm.entity.MeetingEntity;
 import de.qytera.suite_crm.page_objects.*;
 import de.qytera.suite_crm.processes.meetings.FillMeetingsFormProcess;
@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
         name = "Meetings Form",
         description = "Create meetings form"
 )
-public class MeetingsTest extends TestContext {
+public class MeetingsTest extends QtafTestNGContext {
     @DataProvider(name = "meetingsData")
     public Object[][] getCallsData() {
         return MeetingEntityProvider.getMeetingEntities();

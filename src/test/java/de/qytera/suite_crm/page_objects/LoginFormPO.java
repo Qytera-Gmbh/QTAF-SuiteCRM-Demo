@@ -1,14 +1,14 @@
 package de.qytera.suite_crm.page_objects;
 
 import de.qytera.qtaf.core.guice.annotations.Step;
-import de.qytera.suite_crm.TestContext;
+import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import org.openqa.selenium.By;
 
 
 /**
  * Login form page object
  */
-public class LoginFormPO extends TestContext {
+public class LoginFormPO extends QtafTestNGContext {
     protected By usernameFieldSelector = By.id("user_name");
     protected By passwordFieldSelector = By.cssSelector("input#username_password");
     protected By loginButtonSelector = By.cssSelector("input#bigbutton");
