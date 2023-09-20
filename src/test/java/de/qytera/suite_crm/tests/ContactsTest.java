@@ -20,7 +20,14 @@ public class ContactsTest extends QtafTestNGContext {
         return ContactEntityProvider.getContactEntities();
     }
 
-    @Test(testName = "ContactsTest", description = "Contacts Test", dependsOnGroups = {"login"}, dataProvider = "contactsData", suiteName = "suite2")
+    @Test(
+            testName = "ContactsTest",
+            description = "Contacts Test",
+            groups = {"contacts"},
+            dependsOnGroups = {"login"},
+            dataProvider = "contactsData",
+            suiteName = "suite2"
+    )
     @XrayTest(key = "QTAF-568")
     public void testContacts(ContactEntity contactEntity) {
         // Instantiate page objects

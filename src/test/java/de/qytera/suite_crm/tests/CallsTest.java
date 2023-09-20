@@ -37,7 +37,14 @@ public class CallsTest extends QtafTestNGContext {
         topBarCallsMenu.clickLogCallLink();
     }
 
-    @Test(testName = "CallsTest", description = "Calls Test", dependsOnGroups = {"login"}, dataProvider = "callsData", suiteName = "suite2")
+    @Test(
+            testName = "CallsTest",
+            description = "Calls Test",
+            groups = {"calls"},
+            dependsOnGroups = {"login"},
+            dataProvider = "callsData",
+            suiteName = "suite2"
+    )
     @XrayTest(key = "QTAF-567")
     public void testCalls(CallEntity callEntity) {
         FillCallFormProcess fillCallFormProcess = load(FillCallFormProcess.class);

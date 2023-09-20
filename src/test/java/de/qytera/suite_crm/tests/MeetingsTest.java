@@ -21,7 +21,14 @@ public class MeetingsTest extends QtafTestNGContext {
         return MeetingEntityProvider.getMeetingEntities();
     }
 
-    @Test(testName = "MeetingsTest", description = "Meetings Test", dependsOnGroups = {"login"}, dataProvider = "meetingsData", suiteName = "suite2")
+    @Test(
+            testName = "MeetingsTest",
+            description = "Meetings Test",
+            groups = {"meetings"},
+            dependsOnGroups = {"login"},
+            dataProvider = "meetingsData",
+            suiteName = "suite2"
+    )
     @XrayTest(key = "QTAF-573")
     public void testMeetings(MeetingEntity meetingEntity){
         // Instantiate page objects

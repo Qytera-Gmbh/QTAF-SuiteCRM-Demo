@@ -11,7 +11,12 @@ import org.testng.annotations.Test;
         description = "Login to the CRM"
 )
 public class LoginTest extends QtafTestNGContext {
-    @Test(testName = "LoginTest", description = "Login Test", groups = {"login"}, suiteName = "suite1")
+    @Test(
+            testName = "LoginTest",
+            description = "Login Test",
+            groups = {"login"},
+            suiteName = "suite1"
+    )
     @XrayTest(key = "QTAF-496")
     public void testLogin(){
         load(LoginProcess.class).execute();

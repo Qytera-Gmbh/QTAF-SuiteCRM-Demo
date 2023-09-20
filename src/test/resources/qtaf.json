@@ -43,6 +43,11 @@
     "resultsUpload": {
       "scenarioReportEvidence": false,
       "scenarioImageEvidence": false,
+      "environments": {
+        "enabled": true,
+        "os": false,
+        "driver": true
+      },
       "customStatus": {
         "test": {
           "passed": null,

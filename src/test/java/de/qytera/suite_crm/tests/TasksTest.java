@@ -24,7 +24,14 @@ public class TasksTest extends QtafTestNGContext {
         return TaskEntityProvider.getTaskEntities();
     }
 
-    @Test(testName = "TasksTest", description = "Tasks Test", dependsOnGroups = {"login"}, dataProvider = "tasksData", suiteName = "suite2")
+    @Test(
+            testName = "TasksTest",
+            description = "Tasks Test",
+            groups = {"tasks"},
+            dependsOnGroups = {"login"},
+            dataProvider = "tasksData",
+            suiteName = "suite2"
+    )
     @XrayTest(key = "QTAF-572")
     public void testTasks(TaskEntity taskEntity) {
         // Instantiate page objects
