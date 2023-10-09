@@ -6,7 +6,8 @@
     "suite":{
       "name":""
     },
-    "package":"de.qytera.suite_crm.tests"
+    "package":"de.qytera.suite_crm.tests",
+    "continueOnAssertionFailure": true,
   },
   "driver":{
     "name": "chrome",
@@ -43,6 +44,7 @@
     "resultsUpload": {
       "scenarioReportEvidence": false,
       "scenarioImageEvidence": false,
+      "testPlanKey": "QTAF-1062",
       "environments": {
         "enabled": true,
         "os": false,
