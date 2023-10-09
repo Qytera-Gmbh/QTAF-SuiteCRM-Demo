@@ -3,6 +3,9 @@ package de.qytera.suite_crm.driver;
 import de.qytera.qtaf.core.selenium.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Create a new driver factory
  */
@@ -21,8 +24,9 @@ public class MyChrome extends ChromeDriver {
      */
     protected ChromeOptions getCapabilities() {
         ChromeOptions options = super.getCapabilities();
-        options.setCapability("download.default_directory", "C:\\Users\\John\\Downloads");
-
+        Map<String, Object> prefs = new HashMap<>();
+        prefs.put("download.default_directory", "/directory/path");
+        options.setExperimentalOption("prefs", prefs);
         return options;
     }
 }
