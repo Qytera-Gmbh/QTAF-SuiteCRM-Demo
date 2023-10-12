@@ -16,23 +16,15 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     restart: always
 
-  # Selenium grid chrome node
-  selenium-node-chrome-2:
-    image: selenium/node-chrome
+  chrome_video:
+    image: selenium/video:ffmpeg-4.3.1-20231004
+    volumes:
+      - ./videos:/videos
+    depends_on:
+      - selenium-node-chrome-1
     environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    restart: always
-
-  # Selenium grid chrome node
-  selenium-node-chrome-3:
-    image: selenium/node-chrome
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    restart: always
+      - DISPLAY_CONTAINER_NAME=selenium-node-chrome-1
+      - FILE_NAME=chrome_video.mp4
 
   # Selenium grid firefox node
   selenium-node-firefox-1:
@@ -43,23 +35,15 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     restart: always
 
-  # Selenium grid firefox node
-  selenium-node-firefox-2:
-    image: selenium/node-firefox
+  firefox_video:
+    image: selenium/video:ffmpeg-4.3.1-20231004
+    volumes:
+      - ./videos:/videos
+    depends_on:
+      - selenium-node-firefox-1
     environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    restart: always
-
-  # Selenium grid firefox node
-  selenium-node-firefox-3:
-    image: selenium/node-firefox
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    restart: always
+      - DISPLAY_CONTAINER_NAME=selenium-node-firefox-1
+      - FILE_NAME=firefox_video.mp4
 
   # Selenium grid edge node
   selenium-node-edge-1:
@@ -70,20 +54,12 @@ services:
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     restart: always
 
-  # Selenium grid edge node
-  selenium-node-edge-2:
-    image: selenium/node-edge
+  edge_video:
+    image: selenium/video:ffmpeg-4.3.1-20231004
+    volumes:
+      - ./videos:/videos
+    depends_on:
+      - selenium-node-edge-1
     environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    restart: always
-
-  # Selenium grid edge node
-  selenium-node-edge-3:
-    image: selenium/node-edge
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-    restart: always
+      - DISPLAY_CONTAINER_NAME=selenium-node-edge-1
+      - FILE_NAME=edge_video.mp4
