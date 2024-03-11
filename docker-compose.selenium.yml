@@ -17,12 +17,3 @@ services:
       - "5902:5900"
       - '7902:7900'
     restart: always
-
-  # Selenium opera
-  selenium-opera:
-    image: selenium/standalone-opera-debug
-    ports:
-      - '4446:4444'
-      - "5903:5900"
-      - '7903:7900'
-    restart: always
