@@ -25,7 +25,6 @@ public class LoginFormPO extends QtafTestNGContext {
                 username,
                 "Expected value of username field to be '%s' and it was '%s'".formatted(username, actualValue)
         );
-        throw new InvalidArgumentException("This is an invalid argument");
     }
 
     @Step(name = "Fill password field", description = "Fill the password field")

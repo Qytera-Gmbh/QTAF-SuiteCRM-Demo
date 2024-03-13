@@ -10,7 +10,7 @@
     "continueOnAssertionFailure": true,
   },
   "driver":{
-    "name": "chrome",
+    "name": "edge",
     "remoteUrl": "http://localhost:4444/wd/hub",
     "headless": false,
     "implicitWaitTimeout": 30,
@@ -42,8 +42,8 @@
       }
     },
     "resultsUpload": {
-      "scenarioReportEvidence": false,
-      "scenarioImageEvidence": false,
+      "scenarioReportEvidence": true,
+      "scenarioImageEvidence": true,
       "testPlanKey": "QTAF-1062",
       "environments": {
         "enabled": true,

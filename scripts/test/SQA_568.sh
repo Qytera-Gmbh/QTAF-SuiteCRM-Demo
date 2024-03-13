@@ -1,0 +1,1 @@
+mvn clean test "-Dtests.groups=SQA-568"
