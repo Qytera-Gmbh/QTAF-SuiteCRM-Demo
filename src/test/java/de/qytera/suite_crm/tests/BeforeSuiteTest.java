@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeSuite;
 )
 public class BeforeSuiteTest extends QtafTestNGContext {
     @BeforeSuite(groups = {"login"})
-    @XrayTest(key = "QTAF-989")
+    @XrayTest(key = "QTAF-989", scenarioReport = true, screenshots = true)
     public void beforeLogin() {
         DriverManager driverManager = load(DriverManager.class);
         driverManager.resizeBrowser(1051, 900);

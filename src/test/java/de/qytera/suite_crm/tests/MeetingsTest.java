@@ -29,7 +29,7 @@ public class MeetingsTest extends QtafTestNGContext {
             dataProvider = "meetingsData",
             suiteName = "suite2"
     )
-    @XrayTest(key = "QTAF-573")
+    @XrayTest(key = "QTAF-573", scenarioReport = true, screenshots = true)
     public void testMeetings(MeetingEntity meetingEntity){
         // Instantiate page objects
         Navigator navigator = load(Navigator.class);

@@ -28,7 +28,7 @@ public class ContactsTest extends QtafTestNGContext {
             dataProvider = "contactsData",
             suiteName = "suite2"
     )
-    @XrayTest(key = "QTAF-568")
+    @XrayTest(key = "QTAF-568", scenarioReport = true, screenshots = true)
     public void testContacts(ContactEntity contactEntity) {
         // Instantiate page objects
         Navigator navigator = load(Navigator.class);

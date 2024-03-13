@@ -32,7 +32,7 @@ public class TasksTest extends QtafTestNGContext {
             dataProvider = "tasksData",
             suiteName = "suite2"
     )
-    @XrayTest(key = "QTAF-572")
+    @XrayTest(key = "QTAF-572", scenarioReport = true, screenshots = true)
     public void testTasks(TaskEntity taskEntity) {
         // Instantiate page objects
         Navigator navigator = load(Navigator.class);

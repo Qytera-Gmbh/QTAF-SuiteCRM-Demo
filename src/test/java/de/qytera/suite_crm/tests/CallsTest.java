@@ -21,7 +21,7 @@ public class CallsTest extends QtafTestNGContext {
     }
 
     @BeforeMethod(description = "Navigate to the calls form")
-    @XrayTest(key = "QTAF-993")
+    @XrayTest(key = "QTAF-993", scenarioReport = true, screenshots = true)
     public void beforeCallsTest() {
         // Instantiate page objects
         Navigator navigator = load(Navigator.class);
@@ -45,7 +45,7 @@ public class CallsTest extends QtafTestNGContext {
             dataProvider = "callsData",
             suiteName = "suite2"
     )
-    @XrayTest(key = "QTAF-567")
+    @XrayTest(key = "QTAF-567", scenarioReport = true, screenshots = true)
     public void testCalls(CallEntity callEntity) {
         FillCallFormProcess fillCallFormProcess = load(FillCallFormProcess.class);
         fillCallFormProcess.setCallEntity(callEntity);
@@ -53,7 +53,7 @@ public class CallsTest extends QtafTestNGContext {
     }
 
     @AfterMethod(description = "Navigate to the home page")
-    @XrayTest(key = "QTAF-994")
+    @XrayTest(key = "QTAF-994", scenarioReport = true, screenshots = true)
     public void afterCallsTest() {
         // Instantiate page objects
         TopNavbar topNavbar = load(TopNavbar.class);

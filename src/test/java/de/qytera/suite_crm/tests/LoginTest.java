@@ -17,7 +17,7 @@ public class LoginTest extends QtafTestNGContext {
             groups = {"login"},
             suiteName = "suite1"
     )
-    @XrayTest(key = "QTAF-496")
+    @XrayTest(key = "QTAF-496", scenarioReport = true, screenshots = true)
     public void testLogin(){
         load(LoginProcess.class).execute();
     }
