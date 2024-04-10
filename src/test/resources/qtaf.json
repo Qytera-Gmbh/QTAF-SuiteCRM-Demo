@@ -10,7 +10,7 @@
     "continueOnAssertionFailure": true,
   },
   "driver":{
-    "name": "edge",
+    "name": "chrome",
     "remoteUrl": "http://localhost:4444/wd/hub",
     "headless": false,
     "implicitWaitTimeout": 30,
@@ -24,7 +24,8 @@
     }
   },
   "logging":{
-    "enabled":true
+    "enabled":true,
+    "logSteps": true
   },
   "xray":{
     "enabled": true,
@@ -58,8 +59,8 @@
           "skipped": null
         },
         "step": {
-          "passed": null,
-          "failed": null,
+          "passed": "PASSED",
+          "failed": "FAILED",
           "pending": null,
           "skipped": null,
           "undefined": null
