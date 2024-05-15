@@ -17,27 +17,27 @@
         <dependency>
             <groupId>de.qytera</groupId>
             <artifactId>qtaf-core</artifactId>
-            <version>LOCAL_2024_04_10_010</version>
+            <version>0.2.17</version>
         </dependency>
         <dependency>
             <groupId>de.qytera</groupId>
             <artifactId>qtaf-html-report-plugin</artifactId>
-            <version>LOCAL_2024_04_10_010</version>
+            <version>0.2.17</version>
         </dependency>
         <dependency>
             <groupId>de.qytera</groupId>
             <artifactId>qtaf-xray-plugin</artifactId>
-            <version>LOCAL_2024_04_10_010</version>
+            <version>0.2.17</version>
         </dependency>
         <dependency>
             <groupId>de.qytera</groupId>
             <artifactId>qtaf-allure-plugin</artifactId>
-            <version>LOCAL_2024_04_10_010</version>
+            <version>0.2.17</version>
         </dependency>
         <dependency>
             <groupId>de.qytera</groupId>
             <artifactId>qtaf-rest-assured</artifactId>
-            <version>LOCAL_2024_04_10_010</version>
+            <version>0.2.17</version>
         </dependency>
         <dependency>
             <groupId>com.github.javafaker</groupId>

@@ -4,6 +4,7 @@ import de.qytera.qtaf.core.config.annotations.TestFeature;
 import de.qytera.qtaf.testng.context.QtafTestNGContext;
 import de.qytera.qtaf.xray.annotation.XrayTest;
 import de.qytera.suite_crm.entity.CallEntity;
+import de.qytera.suite_crm.listeners.TestListener;
 import de.qytera.suite_crm.page_objects.*;
 import de.qytera.suite_crm.processes.calls.FillCallFormProcess;
 import de.qytera.suite_crm.provider.CallEntityProvider;
