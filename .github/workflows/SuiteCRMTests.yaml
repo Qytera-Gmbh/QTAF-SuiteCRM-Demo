@@ -44,7 +44,7 @@ jobs:
           ALLOW_EMPTY_PASSWORD: yes
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Sleep for 45 seconds
         run: sleep 45s
         shell: bash
@@ -52,7 +52,7 @@ jobs:
         run: curl http://localhost:8080
       - name: Ping application
         run: wget http://localhost:8080
-      - uses: actions/setup-java@v3
+      - uses: actions/setup-java@v4
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '19'

@@ -14,12 +14,12 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Get current time
-        uses: gerred/actions/current-time@master
+        uses: snooze-au/current-time-action@master
         id: current-time
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.1.8
       - name: Create AWS credentials files
@@ -31,7 +31,7 @@ jobs:
       - name: Generate deployment package
         run: zip -r deploy.zip . docker-compose.yml
       - name: Deploy to EB
-        uses: einaregilsson/beanstalk-deploy@v20
+        uses: einaregilsson/beanstalk-deploy@v22
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
