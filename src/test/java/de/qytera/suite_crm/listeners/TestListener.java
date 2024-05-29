@@ -10,6 +10,6 @@ public class TestListener implements IInvokedMethodListener {
     public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
         String groups = System.getProperty("groups");
         System.out.println("GROUPS: " + groups);
-        throw new SkipException("Tests skipped by TestListener");
+        //throw new SkipException("Tests skipped by TestListener");
     }
 }

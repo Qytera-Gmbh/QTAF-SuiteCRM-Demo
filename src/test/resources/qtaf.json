@@ -21,6 +21,33 @@
       "beforeStep": false,
       "afterStep": false,
       "afterStepFailure": true
+    },
+    "record": {
+      "network": false,
+      "screencast": false
+    },
+    "options": [
+      "--window-size=1920,1080",
+      "--disable-extensions",
+      "--disable-popup-blocking",
+      "--test-type",
+      "--disable-gpu",
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-software-rasterizer"
+    ],
+    "capabilities": {},
+    "preferences": {
+      "profile": {
+        "default_content_settings": {
+          "popups": 0
+        }
+      },
+      "download": {
+        "default_directory": "$USER_DIR/src/test/resources",
+        "prompt_for_download": false,
+        "directory_upgrade": true
+      }
     }
   },
   "logging":{
@@ -46,6 +73,7 @@
       "scenarioReportEvidence": true,
       "scenarioImageEvidence": true,
       "testPlanKey": "QTAF-1062",
+      "assignee": null,
       "environments": {
         "enabled": true,
         "os": false,
@@ -64,6 +92,10 @@
           "pending": null,
           "skipped": null,
           "undefined": null
+        },
+        "testExecutionIssue": {
+          "failed": "DONE",
+          "passed": "DONE"
         }
       },
       "tests": {
